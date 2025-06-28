@@ -1,5 +1,7 @@
 #include "algoritmos.hpp"
 #include <algorithm>
+#include <cmath>
+#include<limits>
 #include <utility>
 #include <queue>
 #include <iostream>
@@ -53,4 +55,56 @@ double AlgoritmosMochila::branchAndBound(std::vector<Item> items, double W){
         pq.push({curr_node.level + 1, curr_node.total_w, curr_node.total_v, curr_node.total_v + v_w[curr_node.level + 1].second * (W - curr_node.total_w)});
     }
     return best_sol;
+}
+
+// Implementação do algoritmo 2-aproximativo FPTAS
+// Retorna um valor, no máximo, duas vezes pior que o resultado ótimo que pode ser obtido com a mochila
+double AlgoritmosMochila::aproximativo(std::vector<Item> items, double W){
+    const double EPS = 0.5;       // Garante q o algoritmo seja 2-aproximativo
+    int valorTotal = 0;
+    int n = (int) items.size();
+
+    double Vmax = 0;
+    for(Item item : items){
+        Vmax = std::max(Vmax, item.v);
+    }
+
+    const double MI = (Vmax*EPS)/n;
+
+    // Transforma os valores do problema para o 2-aprox
+    std::vector<int> valueAprox(n);
+    for(int i = 0; i < n; i++){
+        valueAprox[i] = (int) std::floor(items[i].v / MI);
+        valorTotal += valueAprox[i];
+    }
+
+    const double INF = std::numeric_limits<double>::infinity();
+    std::vector<std::vector<double>> tabela(n + 1, std::vector<double>(valorTotal + 1, INF));
+
+    for(int i = 0; i <= n; i++)
+        tabela[i][0] = 0;
+
+    for(int i = 1; i <= n; i++){
+        int currV = valueAprox[i-1];
+        double currW = items[i-1].w;
+        for(int V = 0; V <= valorTotal; V++){
+            // Não escolhe o item i
+            double melhorEscolha = tabela[i-1][V];
+            // Escolhe o item i
+            if(V >= currV && tabela[i-1][V-currV] < INF) melhorEscolha = std::min(melhorEscolha, currW + tabela[i-1][V-currV]);
+            tabela[i][V] = melhorEscolha;
+        }
+    }
+
+    // Pega o melhor valor transformado que respeite o limite da mochila
+    int ans = 0;
+    for(int V = valorTotal; V >= 0; V--){
+        if(tabela[n][V] <= W){
+            ans = V;
+            break;
+        }
+    }
+
+    // Converte o valor para a instância do problema original, garantindo: output >= (1-EPS)OPT
+    return ans * MI;
 }

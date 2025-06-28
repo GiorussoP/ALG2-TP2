@@ -14,6 +14,7 @@ int main() {
     itens.push_back({5,3,5});
     itens.push_back({6,6,10});
     std::cout<< "Branch and Bound: " << AlgoritmosMochila::branchAndBound(itens, 50) << std::endl;
+    std::cout << "2-aproximativo: " << AlgoritmosMochila::aproximativo(itens, 50) << std::endl;
 
 
     
