@@ -1,0 +1,50 @@
+Número de Total de Itens: 20 Peso máximo: 879
+Branch and Bound: 1025
+2-aproximativo: 1003.27
+Tempo Branch and Bound : 9002
+Tempo Aproximatibo : 412
+Número de Total de Itens: 10 Peso máximo: 269
+Branch and Bound: 295
+2-aproximativo: 287.1
+Tempo Branch and Bound : 68
+Tempo Aproximatibo : 63
+Número de Total de Itens: 20 Peso máximo: 878
+Branch and Bound: 1024
+2-aproximativo: 1001
+Tempo Branch and Bound : 16201
+Tempo Aproximatibo : 447
+Número de Total de Itens: 4 Peso máximo: 20
+Branch and Bound: 35
+2-aproximativo: 31.875
+Tempo Branch and Bound : 16
+Tempo Aproximatibo : 9
+Número de Total de Itens: 4 Peso máximo: 11
+Branch and Bound: 23
+2-aproximativo: 22.75
+Tempo Branch and Bound : 19
+Tempo Aproximatibo : 9
+Número de Total de Itens: 15 Peso máximo: 375
+Branch and Bound: 481.069
+2-aproximativo: 467.902
+Tempo Branch and Bound : 94
+Tempo Aproximatibo : 110
+Número de Total de Itens: 10 Peso máximo: 60
+Branch and Bound: 52
+2-aproximativo: 52
+Tempo Branch and Bound : 257
+Tempo Aproximatibo : 51
+Número de Total de Itens: 7 Peso máximo: 50
+Branch and Bound: 107
+2-aproximativo: 105
+Tempo Branch and Bound : 26
+Tempo Aproximatibo : 16
+Número de Total de Itens: 23 Peso máximo: 10000
+Branch and Bound: 9767
+2-aproximativo: 9618.07
+Tempo Branch and Bound : 256331
+Tempo Aproximatibo : 506
+Número de Total de Itens: 5 Peso máximo: 80
+Branch and Bound: 130
+2-aproximativo: 122.1
+Tempo Branch and Bound : 25
+Tempo Aproximatibo : 13

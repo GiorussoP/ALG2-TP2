@@ -7,6 +7,10 @@ INC_DIR := include
 OBJ_DIR := obj
 BIN_DIR := bin
 SRC_DIR := src
+TESTES_DIR:=tests
+
+LARGE := $(wildcard $(TESTES_DIR)/large_scale_trated/*)
+LOW := $(wildcard $(TESTES_DIR)/low-dimensional/*)
 
 ## saída
 EXEC_NAME := tp2.exe
@@ -33,10 +37,17 @@ run : all
 	./$(BIN_DIR)/$(EXEC_NAME)
 
 # Executa os testes
-tests: all
-	echo -e "\n\e[34;1mTeste 1\e[0m\n"
-	./$(BIN_DIR)/$(EXEC_NAME) < tests/inputs/testCase01.txt
-	
+testslow: all
+	@rm -f low_results.txt
+	@for file in $(LOW); do \
+		./$(BIN_DIR)/$(EXEC_NAME)  "$$file" >> low_results.txt; \
+	done
+
+testslarge: all
+	@rm -f large_results.txt
+	@for file in $(LARGE); do \
+		./$(BIN_DIR)/$(EXEC_NAME)  "$$file" >> large_results.txt; \
+	done
 
 
 # Checa se o programa possui vazamentos de memória, usando valgrind.
