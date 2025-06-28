@@ -40,13 +40,24 @@ run : all
 testslow: all
 	@rm -f low_results.txt
 	@for file in $(LOW); do \
-		./$(BIN_DIR)/$(EXEC_NAME)  "$$file" >> low_results.txt; \
+		# modo 1 -------------------------------------------- \
+		echo "=== $$file (mode 1) ===" ; \
+		./$(BIN_DIR)/$(EXEC_NAME) "$$file" 1 >> low_results.txt ; \
+		# modo 2 -------------------------------------------- \
+		echo "=== $$file (mode 2) ===" ; \
+		./$(BIN_DIR)/$(EXEC_NAME) "$$file" 2 >> low_results.txt ; \
 	done
+
 
 testslarge: all
 	@rm -f large_results.txt
 	@for file in $(LARGE); do \
-		./$(BIN_DIR)/$(EXEC_NAME)  "$$file" >> large_results.txt; \
+		# modo 1 -------------------------------------------- \
+		echo "=== $$file (mode 1) ===" ; \
+		./$(BIN_DIR)/$(EXEC_NAME)  "$$file" 1 >> large_results.txt; \
+		# modo 2 -------------------------------------------- \
+		echo "=== $$file (mode 2) ===" ; \
+		./$(BIN_DIR)/$(EXEC_NAME)  "$$file" 2 >> large_results.txt; \
 	done
 
 

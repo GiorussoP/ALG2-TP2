@@ -50,16 +50,30 @@ void loadData(std::string &path, std::vector<Item> &list, int &wMax){
     }
 }
 
+static void printMemMetrics(const char* tag) {
+    struct rusage ru{};
+    getrusage(RUSAGE_SELF, &ru);
+
+    std::cout << "\n=== Métricas de Memória [" << tag << "] ===\n"
+              << "* Uso aproximado (rusage): "     << ru.ru_ixrss   << " KB\n"
+              << "* Dados não compartilhados: "    << ru.ru_idrss   << " KB\n"
+              << "* Stack não compartilhado: "     << ru.ru_isrss   << " KB\n"
+              << "* Memória residente real (RSS): " << ru.ru_maxrss << " KB\n"
+              << "* Pico de memória: "             << ru.ru_maxrss << " KB\n";
+}
 
 int main(int argc, char **argv) {
-    if(argc < 2){
-        std::cerr << "Usage: " << argv[0] << " <path>" << std::endl;
+    if(argc < 3){
+        std::cerr << "Usage: " << argv[0] << " <path> <mode>\n"
+                  << "       <mode> = 1 (branch‑and‑bound) | 2 (approximativo)\n";
         return 1;
     }
     //Peso Máximo do problema
     int wMax;
     //caminho do arquivo
     std::string path = argv[1];
+    //modo: 1 (branch and bound); 2 (aproximativo)
+    int modo = std::stoi(argv[2]);
     //vetor auxiliar
     std::vector<Item> list;
     //lendo o arquivo e salvando em um vetor
@@ -71,22 +85,25 @@ int main(int argc, char **argv) {
         */
 
     std::cout<<"Número de Total de Itens: " << list.size()<<" Peso máximo: "<< wMax<<std::endl;
-    std::cout<< "Branch and Bound: " << AlgoritmosMochila::branchAndBound(list, wMax) << std::endl;
-    std::cout << "2-aproximativo: " << AlgoritmosMochila::aproximativo(list, wMax) << std::endl;
 
-    //Mensuração do tempo do Branch and Bound padrão
-    getrusage(RUSAGE_SELF, &start);
-    AlgoritmosMochila::branchAndBound(list,wMax);
-    getrusage(RUSAGE_SELF, &end);
+    if(modo == 1){
+        //Mensuração do tempo do Branch and Bound padrão
+        getrusage(RUSAGE_SELF, &start);
+        double resultado = AlgoritmosMochila::branchAndBound(list, wMax);
+        getrusage(RUSAGE_SELF, &end);
+        std::cout<< "Branch and Bound: " << resultado << std::endl;
+        printMemMetrics("BD");
+        std::cout<<"Tempo Branch and Bound : "<< totalSpentTime(&start, &end)<<std::endl;
+    }else if(modo == 2){
 
-    std::cout<<"Tempo Branch and Bound : "<<totalSpentTime(&start, &end)<<std::endl;
-
-    //mensuração do tempo do aproximativo
-    getrusage(RUSAGE_SELF, &start);
-    AlgoritmosMochila::aproximativo(list, wMax);
-    getrusage(RUSAGE_SELF, &end);
-
-    std::cout<<"Tempo Aproximatibo : "<<totalSpentTime(&start, &end)<<std::endl;
+        //mensuração do tempo do aproximativo
+        getrusage(RUSAGE_SELF, &start);
+        double resultado = AlgoritmosMochila::aproximativo(list, wMax);
+        getrusage(RUSAGE_SELF, &end);
+        std::cout << "2-aproximativo: " << resultado << std::endl;
+        printMemMetrics("aprox");
+        std::cout<<"Tempo Aproximativo : "<< totalSpentTime(&start, &end)<<std::endl;
+    }
 
     return 0;
 }
