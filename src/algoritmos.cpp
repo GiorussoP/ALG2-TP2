@@ -72,39 +72,53 @@ double AlgoritmosMochila::aproximativo(std::vector<Item> items, double W){
     const double MI = (Vmax*EPS)/n;
 
     // Transforma os valores do problema para o 2-aprox
-    std::vector<int> valueAprox(n);
+    std::vector<int> valorAprox(n);
     for(int i = 0; i < n; i++){
-        valueAprox[i] = (int) std::floor(items[i].v / MI);
-        valorTotal += valueAprox[i];
+        valorAprox[i] = (int) std::floor(items[i].v / MI);
+        valorTotal += valorAprox[i];
     }
 
     const double INF = std::numeric_limits<double>::infinity();
     std::vector<std::vector<double>> tabela(n + 1, std::vector<double>(valorTotal + 1, INF));
+    std::vector<std::vector<bool>> escolhidos(n + 1, std::vector<bool>(valorTotal + 1, false));
 
     for(int i = 0; i <= n; i++)
         tabela[i][0] = 0;
 
     for(int i = 1; i <= n; i++){
-        int currV = valueAprox[i-1];
+        int currV = valorAprox[i-1];
         double currW = items[i-1].w;
         for(int V = 0; V <= valorTotal; V++){
             // Não escolhe o item i
-            double melhorEscolha = tabela[i-1][V];
+            double semItem = tabela[i-1][V];
             // Escolhe o item i
-            if(V >= currV && tabela[i-1][V-currV] < INF) melhorEscolha = std::min(melhorEscolha, currW + tabela[i-1][V-currV]);
+            double comItem = INF;
+            if(V >= currV && tabela[i-1][V-currV] < INF) comItem = currW + tabela[i-1][V-currV];
+            double melhorEscolha = std::min(semItem, comItem);
             tabela[i][V] = melhorEscolha;
+            escolhidos[i][V] = (comItem < semItem);
+            
         }
     }
 
     // Pega o melhor valor transformado que respeite o limite da mochila
-    int ans = 0;
+    int ansTransformado = 0;
     for(int V = valorTotal; V >= 0; V--){
         if(tabela[n][V] <= W){
-            ans = V;
+            ansTransformado = V;
             break;
         }
     }
 
-    // Converte o valor para a instância do problema original, garantindo: output >= (1-EPS)OPT
-    return ans * MI;
+    // Encontrar o real valor colocado na mochila encontrado pelo aproximativo
+    double ans = 0.0;
+    int V = ansTransformado;  // Começa do melhor V transformado
+    for (int i = n; i > 0; i--){
+        if (escolhidos[i][V]){
+            ans += items[i-1].v;
+            V -= valorAprox[i-1];
+        }
+    }
+    
+    return ans;  // Soma dos valores do itens selecionados pelo aproximativo, garantindo output >= (1-EPS)OPT
 }

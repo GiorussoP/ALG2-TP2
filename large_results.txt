@@ -5,19 +5,19 @@ Branch and Bound: 5397
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1900 KB
-* Pico de memória: 1900 KB
-Tempo Branch and Bound : 2435
+* Memória residente real (RSS): 1876 KB
+* Pico de memória: 1876 KB
+Tempo Branch and Bound : 2470
 Número de Total de Itens: 200 Peso máximo: 997
-2-aproximativo: 5372.03
+2-aproximativo: 5397
 
 === Métricas de Memória [aprox] ===
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 77000 KB
-* Pico de memória: 77000 KB
-Tempo Aproximativo : 159854
+* Memória residente real (RSS): 77868 KB
+* Pico de memória: 77868 KB
+Tempo Aproximativo : 522695
 Número de Total de Itens: 500 Peso máximo: 2543
 Branch and Bound: 28857
 
@@ -25,19 +25,19 @@ Branch and Bound: 28857
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1928 KB
-* Pico de memória: 1928 KB
-Tempo Branch and Bound : 928095
+* Memória residente real (RSS): 1916 KB
+* Pico de memória: 1916 KB
+Tempo Branch and Bound : 552309
 Número de Total de Itens: 500 Peso máximo: 2543
-2-aproximativo: 28832.2
+2-aproximativo: 28857
 
 === Métricas de Memória [aprox] ===
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 975428 KB
-* Pico de memória: 975428 KB
-Tempo Aproximativo : 1.12164e+06
+* Memória residente real (RSS): 988556 KB
+* Pico de memória: 988556 KB
+Tempo Aproximativo : 1.13114e+06
 Número de Total de Itens: 500 Peso máximo: 2543
 Branch and Bound: 4566
 
@@ -45,19 +45,19 @@ Branch and Bound: 4566
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1884 KB
-* Pico de memória: 1884 KB
-Tempo Branch and Bound : 86332
+* Memória residente real (RSS): 1896 KB
+* Pico de memória: 1896 KB
+Tempo Branch and Bound : 85657
 Número de Total de Itens: 500 Peso máximo: 2543
-2-aproximativo: 4551.61
+2-aproximativo: 4566
 
 === Métricas de Memória [aprox] ===
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 947160 KB
-* Pico de memória: 947160 KB
-Tempo Aproximativo : 932083
+* Memória residente real (RSS): 960080 KB
+* Pico de memória: 960080 KB
+Tempo Aproximativo : 673646
 Número de Total de Itens: 500 Peso máximo: 2517
 Branch and Bound: 7117
 
@@ -65,16 +65,16 @@ Branch and Bound: 7117
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1912 KB
-* Pico de memória: 1912 KB
-Tempo Branch and Bound : 770633
+* Memória residente real (RSS): 1936 KB
+* Pico de memória: 1936 KB
+Tempo Branch and Bound : 491068
 Número de Total de Itens: 500 Peso máximo: 2517
-2-aproximativo: 7091.98
+2-aproximativo: 7117
 
 === Métricas de Memória [aprox] ===
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1089860 KB
-* Pico de memória: 1089860 KB
-Tempo Aproximativo : 1.33705e+06
+* Memória residente real (RSS): 1104668 KB
+* Pico de memória: 1104668 KB
+Tempo Aproximativo : 1.20035e+06
