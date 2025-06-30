@@ -1,200 +1,300 @@
-Número de Total de Itens: 20 Peso máximo: 879
+* Número de itens: 20
+* Peso médio: 54.9
+* Peso máximo: 96
+* Valor médio: 54.3
+* Valor máximo: 91
+* Capacidade da Mochila: 879
 Branch and Bound: 1025
+=== Métricas de Memória [BB] ===
+* Uso aproximado (rusage): 0 KB
+* Dados não compartilhados: 0 KB
+* Stack não compartilhado: 0 KB
+* Memória residente real (RSS): 1904 KB
+* Pico de memória: 1904 KB
+Tempo Branch and Bound : 2657
 
-=== Métricas de Memória [BD] ===
+* Número de itens: 20
+* Peso médio: 54.9
+* Peso máximo: 96
+* Valor médio: 54.3
+* Valor máximo: 91
+* Capacidade da Mochila: 879
+2-aproximativo: 1025
+=== Métricas de Memória [aprox] ===
+* Uso aproximado (rusage): 0 KB
+* Dados não compartilhados: 0 KB
+* Stack não compartilhado: 0 KB
+* Memória residente real (RSS): 3780 KB
+* Pico de memória: 3780 KB
+Tempo Aproximativo : 1005
+
+* Número de itens: 10
+* Peso médio: 53.9
+* Peso máximo: 95
+* Valor médio: 41.2
+* Valor máximo: 87
+* Capacidade da Mochila: 269
+Branch and Bound: 295
+=== Métricas de Memória [BB] ===
+* Uso aproximado (rusage): 0 KB
+* Dados não compartilhados: 0 KB
+* Stack não compartilhado: 0 KB
+* Memória residente real (RSS): 1924 KB
+* Pico de memória: 1924 KB
+Tempo Branch and Bound : 25
+
+* Número de itens: 10
+* Peso médio: 53.9
+* Peso máximo: 95
+* Valor médio: 41.2
+* Valor máximo: 87
+* Capacidade da Mochila: 269
+2-aproximativo: 293
+=== Métricas de Memória [aprox] ===
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
 * Memória residente real (RSS): 1900 KB
 * Pico de memória: 1900 KB
-Tempo Branch and Bound : 4231
-Número de Total de Itens: 20 Peso máximo: 879
-2-aproximativo: 1025
-
-=== Métricas de Memória [aprox] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 3680 KB
-* Pico de memória: 3680 KB
-Tempo Aproximativo : 544
-Número de Total de Itens: 10 Peso máximo: 269
-Branch and Bound: 295
-
-=== Métricas de Memória [BD] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1928 KB
-* Pico de memória: 1928 KB
-Tempo Branch and Bound : 33
-Número de Total de Itens: 10 Peso máximo: 269
-2-aproximativo: 293
-
-=== Métricas de Memória [aprox] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1936 KB
-* Pico de memória: 1936 KB
 Tempo Aproximativo : 68
-Número de Total de Itens: 20 Peso máximo: 878
+
+* Número de itens: 20
+* Peso médio: 54.9
+* Peso máximo: 96
+* Valor médio: 54.25
+* Valor máximo: 91
+* Capacidade da Mochila: 878
 Branch and Bound: 1024
-
-=== Métricas de Memória [BD] ===
+=== Métricas de Memória [BB] ===
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1932 KB
-* Pico de memória: 1932 KB
-Tempo Branch and Bound : 4192
-Número de Total de Itens: 20 Peso máximo: 878
+* Memória residente real (RSS): 1924 KB
+* Pico de memória: 1924 KB
+Tempo Branch and Bound : 2550
+
+* Número de itens: 20
+* Peso médio: 54.9
+* Peso máximo: 96
+* Valor médio: 54.25
+* Valor máximo: 91
+* Capacidade da Mochila: 878
 2-aproximativo: 1024
-
 === Métricas de Memória [aprox] ===
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 3664 KB
-* Pico de memória: 3664 KB
-Tempo Aproximativo : 523
-Número de Total de Itens: 4 Peso máximo: 20
+* Memória residente real (RSS): 3844 KB
+* Pico de memória: 3844 KB
+Tempo Aproximativo : 462
+
+* Número de itens: 4
+* Peso médio: 6.75
+* Peso máximo: 9
+* Valor médio: 12
+* Valor máximo: 15
+* Capacidade da Mochila: 20
 Branch and Bound: 35
-
-=== Métricas de Memória [BD] ===
+=== Métricas de Memória [BB] ===
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1940 KB
-* Pico de memória: 1940 KB
-Tempo Branch and Bound : 27
-Número de Total de Itens: 4 Peso máximo: 20
-2-aproximativo: 35
+* Memória residente real (RSS): 1900 KB
+* Pico de memória: 1900 KB
+Tempo Branch and Bound : 9
 
+* Número de itens: 4
+* Peso médio: 6.75
+* Peso máximo: 9
+* Valor médio: 12
+* Valor máximo: 15
+* Capacidade da Mochila: 20
+2-aproximativo: 35
 === Métricas de Memória [aprox] ===
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1880 KB
-* Pico de memória: 1880 KB
-Tempo Aproximativo : 31
-Número de Total de Itens: 4 Peso máximo: 11
-Branch and Bound: 23
+* Memória residente real (RSS): 1896 KB
+* Pico de memória: 1896 KB
+Tempo Aproximativo : 19
 
-=== Métricas de Memória [BD] ===
+* Número de itens: 4
+* Peso médio: 4.75
+* Peso máximo: 7
+* Valor médio: 10.25
+* Valor máximo: 13
+* Capacidade da Mochila: 11
+Branch and Bound: 23
+=== Métricas de Memória [BB] ===
+* Uso aproximado (rusage): 0 KB
+* Dados não compartilhados: 0 KB
+* Stack não compartilhado: 0 KB
+* Memória residente real (RSS): 1916 KB
+* Pico de memória: 1916 KB
+Tempo Branch and Bound : 12
+
+* Número de itens: 4
+* Peso médio: 4.75
+* Peso máximo: 7
+* Valor médio: 10.25
+* Valor máximo: 13
+* Capacidade da Mochila: 11
+2-aproximativo: 23
+=== Métricas de Memória [aprox] ===
+* Uso aproximado (rusage): 0 KB
+* Dados não compartilhados: 0 KB
+* Stack não compartilhado: 0 KB
+* Memória residente real (RSS): 1904 KB
+* Pico de memória: 1904 KB
+Tempo Aproximativo : 19
+
+* Número de itens: 15
+* Peso médio: 49.4611
+* Peso máximo: 89.5962
+* Valor médio: 37.5331
+* Valor máximo: 98.8525
+* Capacidade da Mochila: 375
+Branch and Bound: 481.069
+=== Métricas de Memória [BB] ===
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
 * Memória residente real (RSS): 1920 KB
 * Pico de memória: 1920 KB
-Tempo Branch and Bound : 19
-Número de Total de Itens: 4 Peso máximo: 11
-2-aproximativo: 23
+Tempo Branch and Bound : 38
 
-=== Métricas de Memória [aprox] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1880 KB
-* Pico de memória: 1880 KB
-Tempo Aproximativo : 23
-Número de Total de Itens: 15 Peso máximo: 375
-Branch and Bound: 481.069
-
-=== Métricas de Memória [BD] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1932 KB
-* Pico de memória: 1932 KB
-Tempo Branch and Bound : 98
-Número de Total de Itens: 15 Peso máximo: 375
+* Número de itens: 15
+* Peso médio: 49.4611
+* Peso máximo: 89.5962
+* Valor médio: 37.5331
+* Valor máximo: 98.8525
+* Capacidade da Mochila: 375
 2-aproximativo: 481.069
-
 === Métricas de Memória [aprox] ===
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1928 KB
-* Pico de memória: 1928 KB
-Tempo Aproximativo : 236
-Número de Total de Itens: 10 Peso máximo: 60
-Branch and Bound: 52
+* Memória residente real (RSS): 1864 KB
+* Pico de memória: 1864 KB
+Tempo Aproximativo : 104
 
-=== Métricas de Memória [BD] ===
+* Número de itens: 10
+* Peso médio: 13
+* Peso máximo: 30
+* Valor médio: 10.5
+* Valor máximo: 20
+* Capacidade da Mochila: 60
+Branch and Bound: 52
+=== Métricas de Memória [BB] ===
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1988 KB
-* Pico de memória: 1988 KB
-Tempo Branch and Bound : 190
-Número de Total de Itens: 10 Peso máximo: 60
-2-aproximativo: 52
+* Memória residente real (RSS): 1860 KB
+* Pico de memória: 1860 KB
+Tempo Branch and Bound : 111
 
+* Número de itens: 10
+* Peso médio: 13
+* Peso máximo: 30
+* Valor médio: 10.5
+* Valor máximo: 20
+* Capacidade da Mochila: 60
+2-aproximativo: 52
+=== Métricas de Memória [aprox] ===
+* Uso aproximado (rusage): 0 KB
+* Dados não compartilhados: 0 KB
+* Stack não compartilhado: 0 KB
+* Memória residente real (RSS): 1864 KB
+* Pico de memória: 1864 KB
+Tempo Aproximativo : 97
+
+* Número de itens: 7
+* Peso médio: 13.2857
+* Peso máximo: 31
+* Valor médio: 26.8571
+* Valor máximo: 70
+* Capacidade da Mochila: 50
+Branch and Bound: 107
+=== Métricas de Memória [BB] ===
+* Uso aproximado (rusage): 0 KB
+* Dados não compartilhados: 0 KB
+* Stack não compartilhado: 0 KB
+* Memória residente real (RSS): 1920 KB
+* Pico de memória: 1920 KB
+Tempo Branch and Bound : 16
+
+* Número de itens: 7
+* Peso médio: 13.2857
+* Peso máximo: 31
+* Valor médio: 26.8571
+* Valor máximo: 70
+* Capacidade da Mochila: 50
+2-aproximativo: 107
 === Métricas de Memória [aprox] ===
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
 * Memória residente real (RSS): 1916 KB
 * Pico de memória: 1916 KB
-Tempo Aproximativo : 130
-Número de Total de Itens: 7 Peso máximo: 50
-Branch and Bound: 107
+Tempo Aproximativo : 29
 
-=== Métricas de Memória [BD] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1908 KB
-* Pico de memória: 1908 KB
-Tempo Branch and Bound : 21
-Número de Total de Itens: 7 Peso máximo: 50
-2-aproximativo: 107
-
-=== Métricas de Memória [aprox] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1944 KB
-* Pico de memória: 1944 KB
-Tempo Aproximativo : 50
-Número de Total de Itens: 23 Peso máximo: 10000
+* Número de itens: 23
+* Peso médio: 844.696
+* Peso máximo: 983
+* Valor médio: 839.522
+* Valor máximo: 981
+* Capacidade da Mochila: 10000
 Branch and Bound: 9767
-
-=== Métricas de Memória [BD] ===
+=== Métricas de Memória [BB] ===
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1936 KB
-* Pico de memória: 1936 KB
-Tempo Branch and Bound : 777036
-Número de Total de Itens: 23 Peso máximo: 10000
-2-aproximativo: 9714
+* Memória residente real (RSS): 1924 KB
+* Pico de memória: 1924 KB
+Tempo Branch and Bound : 189635
 
+* Número de itens: 23
+* Peso médio: 844.696
+* Peso máximo: 983
+* Valor médio: 839.522
+* Valor máximo: 981
+* Capacidade da Mochila: 10000
+2-aproximativo: 9714
 === Métricas de Memória [aprox] ===
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 3700 KB
-* Pico de memória: 3700 KB
-Tempo Aproximativo : 1125
-Número de Total de Itens: 5 Peso máximo: 80
-Branch and Bound: 130
+* Memória residente real (RSS): 3724 KB
+* Pico de memória: 3724 KB
+Tempo Aproximativo : 812
 
-=== Métricas de Memória [BD] ===
+* Número de itens: 5
+* Peso médio: 18.2
+* Peso máximo: 31
+* Valor médio: 28.4
+* Valor máximo: 37
+* Capacidade da Mochila: 80
+Branch and Bound: 130
+=== Métricas de Memória [BB] ===
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
 * Memória residente real (RSS): 1920 KB
 * Pico de memória: 1920 KB
-Tempo Branch and Bound : 13
-Número de Total de Itens: 5 Peso máximo: 80
-2-aproximativo: 130
+Tempo Branch and Bound : 15
 
+* Número de itens: 5
+* Peso médio: 18.2
+* Peso máximo: 31
+* Valor médio: 28.4
+* Valor máximo: 37
+* Capacidade da Mochila: 80
+2-aproximativo: 130
 === Métricas de Memória [aprox] ===
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
 * Memória residente real (RSS): 1900 KB
 * Pico de memória: 1900 KB
-Tempo Aproximativo : 36
+Tempo Aproximativo : 41
+

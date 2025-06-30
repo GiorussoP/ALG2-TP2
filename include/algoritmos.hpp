@@ -5,7 +5,6 @@
 
 // Estrutura que representa um item no problema da mochila binária
 struct Item {
-    unsigned int id;
     double w;
     double v;
 };
