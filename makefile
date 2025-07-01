@@ -73,13 +73,13 @@ testslarge2: all
 	@for file in $(LARGE2); do \
 		# modo 1 -------------------------------------------- \
 		echo "=== $$file (mode 1) ===" ; \
-		./$(BIN_DIR)/$(EXEC_NAME)  "$$file" 1 >> $(RESULTS_DIR)/large_results.txt; \
+		timeout 30m ./$(BIN_DIR)/$(EXEC_NAME)  "$$file" 1 >> $(RESULTS_DIR)/large_results.txt || echo "skipped $$file"; \
 		# modo 2 -------------------------------------------- \
 		echo "=== $$file (mode 2) ===" ; \
-		./$(BIN_DIR)/$(EXEC_NAME)  "$$file" 2 >> $(RESULTS_DIR)/large_results.txt; \
+		timeout 30m ./$(BIN_DIR)/$(EXEC_NAME)  "$$file" 2 >> $(RESULTS_DIR)/large_results.txt || echo "skipped $$file"; \
 		# modo 3 -------------------------------------------- \
 		echo "=== $$file (mode 3) ===" ; \
-		./$(BIN_DIR)/$(EXEC_NAME)  "$$file" 3 >> $(RESULTS_DIR)/large_results.txt; \
+		timeout 30m ./$(BIN_DIR)/$(EXEC_NAME)  "$$file" 3 >> $(RESULTS_DIR)/large_results.txt || echo "skipped $$file"; \
 	done
 
 

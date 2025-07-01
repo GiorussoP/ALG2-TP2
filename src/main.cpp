@@ -104,14 +104,13 @@ int main(int argc, char **argv) {
     //iniciando o struct do contador.
     struct rusage start, end;
 
-
-    printItemInfo(list);
-    std::cout <<"* Capacidade da Mochila: " << w_cap << "\n";
     if(modo == 1){
         //Mensuração do tempo do Branch and Bound padrão
         getrusage(RUSAGE_SELF, &start);
         double resultado = AlgoritmosMochila::branchAndBound(list, w_cap);
         getrusage(RUSAGE_SELF, &end);
+        printItemInfo(list);
+        std::cout <<"* Capacidade da Mochila: " << w_cap << "\n";
         std::cout<< "Branch and Bound: " << resultado << std::endl;
         printMemMetrics("BB");
         std::cout<<"Tempo Branch and Bound : "<< totalSpentTime(&start, &end)<<std::endl;
@@ -121,6 +120,8 @@ int main(int argc, char **argv) {
         getrusage(RUSAGE_SELF, &start);
         double resultado = AlgoritmosMochila::aproximativoFPTAS(list, w_cap);
         getrusage(RUSAGE_SELF, &end);
+        printItemInfo(list);
+        std::cout <<"* Capacidade da Mochila: " << w_cap << "\n";
         std::cout << "2-aproximativo-fptas: " << resultado << std::endl;
         printMemMetrics("fptas");
         std::cout<<"Tempo Aproximativo FPTAS: "<< totalSpentTime(&start, &end)<<std::endl;
@@ -130,6 +131,8 @@ int main(int argc, char **argv) {
         getrusage(RUSAGE_SELF, &start);
         double resultado = AlgoritmosMochila::aproximativoGuloso(list, w_cap);
         getrusage(RUSAGE_SELF, &end);
+        printItemInfo(list);
+        std::cout <<"* Capacidade da Mochila: " << w_cap << "\n";
         std::cout << "2-aproximativo-guloso: " << resultado << std::endl;
         printMemMetrics("guloso");
         std::cout<<"Tempo Aproximativo Guloso: "<< totalSpentTime(&start, &end)<<std::endl;
