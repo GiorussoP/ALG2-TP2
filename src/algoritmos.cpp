@@ -57,13 +57,42 @@ double AlgoritmosMochila::branchAndBound(std::vector<Item> items, double W){
     return best_sol;
 }
 
-// Implementação do algoritmo 2-aproximativo FPTAS
+// Implementação do algoritmo 2-aproximativo guloso
 // Retorna um valor, no máximo, duas vezes pior que o resultado ótimo que pode ser obtido com a mochila
-double AlgoritmosMochila::aproximativo(std::vector<Item> items, double W){
-    const double EPS = 0.5;       // Garante q o algoritmo seja 2-aproximativo
-    int valorTotal = 0;
-    int n = (int) items.size();
+double AlgoritmosMochila::aproximativoGuloso(std::vector<Item> items, double W) {
 
+    // Ordena por razão valor/peso decrescente
+    std::sort(items.begin(), items.end(),[](const Item &a, const Item &b) {
+            return (a.v / a.w) > (b.v / b.w);
+        });
+
+    // Solução gulosa
+    double total_w = 0.0;
+    double total_v = 0.0;
+    for (auto item : items) {
+        if (total_w + item.w <= W) {
+            total_w += item.w;
+            total_v += item.v;
+        }
+    }
+
+    // Melhor item isolado que cabe sozinho
+    double melhor_item = 0.0;
+    for (auto item : items) {
+        if (item.w <= W && item.v > melhor_item) {
+            melhor_item = item.v;
+        }
+    }
+
+    // Garante fator 2-aproximativo
+    return std::max(total_v, melhor_item);
+}
+
+// Implementação do algoritmo 2-aproximativo utilizando FPTAS
+double AlgoritmosMochila::aproximativoFPTAS(std::vector<Item> items, double W){ 
+    const double EPS = 0.5; // Garante q o algoritmo seja 2-aproximativo
+    int valorTotal = 0; 
+    int n = (int) items.size();
     double Vmax = 0;
     for(Item item : items){
         Vmax = std::max(Vmax, item.v);
@@ -97,7 +126,7 @@ double AlgoritmosMochila::aproximativo(std::vector<Item> items, double W){
             double melhorEscolha = std::min(semItem, comItem);
             tabela[i][V] = melhorEscolha;
             escolhidos[i][V] = (comItem < semItem);
-            
+
         }
     }
 
@@ -119,6 +148,7 @@ double AlgoritmosMochila::aproximativo(std::vector<Item> items, double W){
             V -= valorAprox[i-1];
         }
     }
-    
+
     return ans;  // Soma dos valores do itens selecionados pelo aproximativo, garantindo output >= (1-EPS)OPT
 }
+

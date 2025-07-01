@@ -7,7 +7,8 @@ INC_DIR := include
 OBJ_DIR := obj
 BIN_DIR := bin
 SRC_DIR := src
-TESTES_DIR:=tests
+TESTES_DIR:= tests
+RESULTS_DIR:= results
 
 LARGE := $(wildcard $(TESTES_DIR)/large_scale_trated/*)
 LOW := $(wildcard $(TESTES_DIR)/low-dimensional/*)
@@ -42,10 +43,13 @@ testslow: all
 	@for file in $(LOW); do \
 		# modo 1 -------------------------------------------- \
 		echo "=== $$file (mode 1) ===" ; \
-		./$(BIN_DIR)/$(EXEC_NAME) "$$file" 1 >> $(TESTES_DIR)/low_results.txt ; \
+		./$(BIN_DIR)/$(EXEC_NAME) "$$file" 1 >> $(RESULTS_DIR)/low_results.txt ; \
 		# modo 2 -------------------------------------------- \
 		echo "=== $$file (mode 2) ===" ; \
-		./$(BIN_DIR)/$(EXEC_NAME) "$$file" 2 >> $(TESTES_DIR)/low_results.txt ; \
+		./$(BIN_DIR)/$(EXEC_NAME) "$$file" 2 >> $(RESULTS_DIR)/low_results.txt ; \
+		# modo 3 -------------------------------------------- \
+		echo "=== $$file (mode 3) ===" ; \
+		./$(BIN_DIR)/$(EXEC_NAME) "$$file" 3 >> $(RESULTS_DIR)/low_results.txt ; \
 	done
 
 
@@ -54,10 +58,13 @@ testslarge: all
 	@for file in $(LARGE); do \
 		# modo 1 -------------------------------------------- \
 		echo "=== $$file (mode 1) ===" ; \
-		./$(BIN_DIR)/$(EXEC_NAME)  "$$file" 1 >> $(TESTES_DIR)/large_results.txt; \
+		./$(BIN_DIR)/$(EXEC_NAME)  "$$file" 1 >> $(RESULTS_DIR)/large_results.txt; \
 		# modo 2 -------------------------------------------- \
 		echo "=== $$file (mode 2) ===" ; \
-		./$(BIN_DIR)/$(EXEC_NAME)  "$$file" 2 >> $(TESTES_DIR)/large_results.txt; \
+		./$(BIN_DIR)/$(EXEC_NAME)  "$$file" 2 >> $(RESULTS_DIR)/large_results.txt; \
+		# modo 3 -------------------------------------------- \
+		echo "=== $$file (mode 3) ===" ; \
+		./$(BIN_DIR)/$(EXEC_NAME)  "$$file" 3 >> $(RESULTS_DIR)/large_results.txt; \
 	done
 
 

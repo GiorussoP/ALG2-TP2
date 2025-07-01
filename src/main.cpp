@@ -88,7 +88,7 @@ void printItemInfo(std::vector<Item>& items) {
 int main(int argc, char **argv) {
     if(argc < 3){
         std::cerr << "Usage: " << argv[0] << " <path> <mode>\n"
-                  << "       <mode> = 1 (branch‑and‑bound) | 2 (approximativo)\n";
+                  << "       <mode> = 1 (branch‑and‑bound) | 2 (approximativo FPTAS) | 3 (aproximativo guloso)\n";
         return 1;
     }
     //Peso Máximo do problema
@@ -119,11 +119,20 @@ int main(int argc, char **argv) {
 
         //mensuração do tempo do aproximativo
         getrusage(RUSAGE_SELF, &start);
-        double resultado = AlgoritmosMochila::aproximativo(list, w_cap);
+        double resultado = AlgoritmosMochila::aproximativoFPTAS(list, w_cap);
         getrusage(RUSAGE_SELF, &end);
-        std::cout << "2-aproximativo: " << resultado << std::endl;
-        printMemMetrics("aprox");
-        std::cout<<"Tempo Aproximativo : "<< totalSpentTime(&start, &end)<<std::endl;
+        std::cout << "2-aproximativo-fptas: " << resultado << std::endl;
+        printMemMetrics("fptas");
+        std::cout<<"Tempo Aproximativo FPTAS: "<< totalSpentTime(&start, &end)<<std::endl;
+    }
+    else if(modo == 3){
+        //mensuração do tempo do aproximativo
+        getrusage(RUSAGE_SELF, &start);
+        double resultado = AlgoritmosMochila::aproximativoGuloso(list, w_cap);
+        getrusage(RUSAGE_SELF, &end);
+        std::cout << "2-aproximativo-guloso: " << resultado << std::endl;
+        printMemMetrics("guloso");
+        std::cout<<"Tempo Aproximativo Guloso: "<< totalSpentTime(&start, &end)<<std::endl;
     }
     std::cout << std::endl;
     

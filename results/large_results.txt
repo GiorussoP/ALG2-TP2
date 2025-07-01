@@ -1,0 +1,180 @@
+* Número de itens: 200
+* Peso médio: 498.09
+* Peso máximo: 997
+* Valor médio: 711.59
+* Valor máximo: 1230
+* Capacidade da Mochila: 997
+Branch and Bound: 5397
+=== Métricas de Memória [BB] ===
+* Uso aproximado (rusage): 0 KB
+* Dados não compartilhados: 0 KB
+* Stack não compartilhado: 0 KB
+* Memória residente real (RSS): 1904 KB
+* Pico de memória: 1904 KB
+Tempo Branch and Bound : 1556
+
+* Número de itens: 200
+* Peso médio: 498.09
+* Peso máximo: 997
+* Valor médio: 711.59
+* Valor máximo: 1230
+* Capacidade da Mochila: 997
+2-aproximativo-fptas: 5397
+=== Métricas de Memória [fptas] ===
+* Uso aproximado (rusage): 0 KB
+* Dados não compartilhados: 0 KB
+* Stack não compartilhado: 0 KB
+* Memória residente real (RSS): 77812 KB
+* Pico de memória: 77812 KB
+Tempo Aproximativo FPTAS: 300534
+
+* Número de itens: 200
+* Peso médio: 498.09
+* Peso máximo: 997
+* Valor médio: 711.59
+* Valor máximo: 1230
+* Capacidade da Mochila: 997
+2-aproximativo-guloso: 5397
+=== Métricas de Memória [guloso] ===
+* Uso aproximado (rusage): 0 KB
+* Dados não compartilhados: 0 KB
+* Stack não compartilhado: 0 KB
+* Memória residente real (RSS): 1920 KB
+* Pico de memória: 1920 KB
+Tempo Aproximativo Guloso: 40
+
+* Número de itens: 500
+* Peso médio: 513.864
+* Peso máximo: 997
+* Valor médio: 494.142
+* Valor máximo: 998
+* Capacidade da Mochila: 2543
+Branch and Bound: 28857
+=== Métricas de Memória [BB] ===
+* Uso aproximado (rusage): 0 KB
+* Dados não compartilhados: 0 KB
+* Stack não compartilhado: 0 KB
+* Memória residente real (RSS): 1912 KB
+* Pico de memória: 1912 KB
+Tempo Branch and Bound : 338508
+
+* Número de itens: 500
+* Peso médio: 513.864
+* Peso máximo: 997
+* Valor médio: 494.142
+* Valor máximo: 998
+* Capacidade da Mochila: 2543
+2-aproximativo-fptas: 28857
+=== Métricas de Memória [fptas] ===
+* Uso aproximado (rusage): 0 KB
+* Dados não compartilhados: 0 KB
+* Stack não compartilhado: 0 KB
+* Memória residente real (RSS): 988776 KB
+* Pico de memória: 988776 KB
+Tempo Aproximativo FPTAS: 547385
+
+* Número de itens: 500
+* Peso médio: 513.864
+* Peso máximo: 997
+* Valor médio: 494.142
+* Valor máximo: 998
+* Capacidade da Mochila: 2543
+2-aproximativo-guloso: 28834
+=== Métricas de Memória [guloso] ===
+* Uso aproximado (rusage): 0 KB
+* Dados não compartilhados: 0 KB
+* Stack não compartilhado: 0 KB
+* Memória residente real (RSS): 1904 KB
+* Pico de memória: 1904 KB
+Tempo Aproximativo Guloso: 113
+
+* Número de itens: 500
+* Peso médio: 513.864
+* Peso máximo: 997
+* Valor médio: 516.634
+* Valor máximo: 1074
+* Capacidade da Mochila: 2543
+Branch and Bound: 4566
+=== Métricas de Memória [BB] ===
+* Uso aproximado (rusage): 0 KB
+* Dados não compartilhados: 0 KB
+* Stack não compartilhado: 0 KB
+* Memória residente real (RSS): 1912 KB
+* Pico de memória: 1912 KB
+Tempo Branch and Bound : 47974
+
+* Número de itens: 500
+* Peso médio: 513.864
+* Peso máximo: 997
+* Valor médio: 516.634
+* Valor máximo: 1074
+* Capacidade da Mochila: 2543
+2-aproximativo-fptas: 4566
+=== Métricas de Memória [fptas] ===
+* Uso aproximado (rusage): 0 KB
+* Dados não compartilhados: 0 KB
+* Stack não compartilhado: 0 KB
+* Memória residente real (RSS): 960140 KB
+* Pico de memória: 960140 KB
+Tempo Aproximativo FPTAS: 1.44758e+06
+
+* Número de itens: 500
+* Peso médio: 513.864
+* Peso máximo: 997
+* Valor médio: 516.634
+* Valor máximo: 1074
+* Capacidade da Mochila: 2543
+2-aproximativo-guloso: 4552
+=== Métricas de Memória [guloso] ===
+* Uso aproximado (rusage): 0 KB
+* Dados não compartilhados: 0 KB
+* Stack não compartilhado: 0 KB
+* Memória residente real (RSS): 1912 KB
+* Pico de memória: 1912 KB
+Tempo Aproximativo Guloso: 114
+
+* Número de itens: 500
+* Peso médio: 508.612
+* Peso máximo: 998
+* Valor médio: 608.612
+* Valor máximo: 1098
+* Capacidade da Mochila: 2517
+Branch and Bound: 7117
+=== Métricas de Memória [BB] ===
+* Uso aproximado (rusage): 0 KB
+* Dados não compartilhados: 0 KB
+* Stack não compartilhado: 0 KB
+* Memória residente real (RSS): 1916 KB
+* Pico de memória: 1916 KB
+Tempo Branch and Bound : 264675
+
+* Número de itens: 500
+* Peso médio: 508.612
+* Peso máximo: 998
+* Valor médio: 608.612
+* Valor máximo: 1098
+* Capacidade da Mochila: 2517
+2-aproximativo-fptas: 7117
+=== Métricas de Memória [fptas] ===
+* Uso aproximado (rusage): 0 KB
+* Dados não compartilhados: 0 KB
+* Stack não compartilhado: 0 KB
+* Memória residente real (RSS): 1104824 KB
+* Pico de memória: 1104824 KB
+Tempo Aproximativo FPTAS: 593078
+
+* Número de itens: 500
+* Peso médio: 508.612
+* Peso máximo: 998
+* Valor médio: 608.612
+* Valor máximo: 1098
+* Capacidade da Mochila: 2517
+2-aproximativo-guloso: 7098
+=== Métricas de Memória [guloso] ===
+* Uso aproximado (rusage): 0 KB
+* Dados não compartilhados: 0 KB
+* Stack não compartilhado: 0 KB
+* Memória residente real (RSS): 1912 KB
+* Pico de memória: 1912 KB
+Tempo Aproximativo Guloso: 83
+

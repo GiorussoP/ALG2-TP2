@@ -28,7 +28,8 @@ class AlgoritmosMochila {
         };
     public:
         static double branchAndBound(std::vector<Item> items, double W);
-        static double aproximativo(std::vector<Item> items, double W);
+        static double aproximativoFPTAS(std::vector<Item> items, double W);
+        static double aproximativoGuloso(std::vector<Item> items, double W);
 };
 
 #endif
