@@ -11,6 +11,7 @@ TESTES_DIR:= tests
 RESULTS_DIR:= results
 
 LARGE := $(wildcard $(TESTES_DIR)/large_scale_trated/*)
+LARGE2 := $(wildcard $(TESTES_DIR)/large_scale_2/*)
 LOW := $(wildcard $(TESTES_DIR)/low-dimensional/*)
 
 ## saída
@@ -56,6 +57,20 @@ testslow: all
 testslarge: all
 	@rm -f $(TESTES_DIR)/large_results.txt
 	@for file in $(LARGE); do \
+		# modo 1 -------------------------------------------- \
+		echo "=== $$file (mode 1) ===" ; \
+		./$(BIN_DIR)/$(EXEC_NAME)  "$$file" 1 >> $(RESULTS_DIR)/large_results.txt; \
+		# modo 2 -------------------------------------------- \
+		echo "=== $$file (mode 2) ===" ; \
+		./$(BIN_DIR)/$(EXEC_NAME)  "$$file" 2 >> $(RESULTS_DIR)/large_results.txt; \
+		# modo 3 -------------------------------------------- \
+		echo "=== $$file (mode 3) ===" ; \
+		./$(BIN_DIR)/$(EXEC_NAME)  "$$file" 3 >> $(RESULTS_DIR)/large_results.txt; \
+	done
+
+testslarge2: all
+	@rm -f $(TESTES_DIR)/large_results.txt
+	@for file in $(LARGE2); do \
 		# modo 1 -------------------------------------------- \
 		echo "=== $$file (mode 1) ===" ; \
 		./$(BIN_DIR)/$(EXEC_NAME)  "$$file" 1 >> $(RESULTS_DIR)/large_results.txt; \
