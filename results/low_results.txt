@@ -9,9 +9,9 @@ Branch and Bound: 1025
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1928 KB
-* Pico de memória: 1928 KB
-Tempo Branch and Bound : 3099
+* Memória residente real (RSS): 1992 KB
+* Pico de memória: 1992 KB
+Tempo Branch and Bound : 2051
 
 * Número de itens: 20
 * Peso médio: 54.9
@@ -24,9 +24,9 @@ Tempo Branch and Bound : 3099
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1940 KB
-* Pico de memória: 1940 KB
-Tempo Aproximativo FPTAS: 99
+* Memória residente real (RSS): 1884 KB
+* Pico de memória: 1884 KB
+Tempo Aproximativo FPTAS: 103
 
 * Número de itens: 20
 * Peso médio: 54.9
@@ -39,9 +39,9 @@ Tempo Aproximativo FPTAS: 99
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1928 KB
-* Pico de memória: 1928 KB
-Tempo Aproximativo Guloso: 6
+* Memória residente real (RSS): 1932 KB
+* Pico de memória: 1932 KB
+Tempo Aproximativo Guloso: 14
 
 * Número de itens: 10
 * Peso médio: 53.9
@@ -54,9 +54,9 @@ Branch and Bound: 295
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1888 KB
-* Pico de memória: 1888 KB
-Tempo Branch and Bound : 20
+* Memória residente real (RSS): 1884 KB
+* Pico de memória: 1884 KB
+Tempo Branch and Bound : 26
 
 * Número de itens: 10
 * Peso médio: 53.9
@@ -69,9 +69,9 @@ Tempo Branch and Bound : 20
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1936 KB
-* Pico de memória: 1936 KB
-Tempo Aproximativo FPTAS: 14
+* Memória residente real (RSS): 1932 KB
+* Pico de memória: 1932 KB
+Tempo Aproximativo FPTAS: 28
 
 * Número de itens: 10
 * Peso médio: 53.9
@@ -99,9 +99,9 @@ Branch and Bound: 1024
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1884 KB
-* Pico de memória: 1884 KB
-Tempo Branch and Bound : 2112
+* Memória residente real (RSS): 1936 KB
+* Pico de memória: 1936 KB
+Tempo Branch and Bound : 1803
 
 * Número de itens: 20
 * Peso médio: 54.9
@@ -114,9 +114,9 @@ Tempo Branch and Bound : 2112
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1940 KB
-* Pico de memória: 1940 KB
-Tempo Aproximativo FPTAS: 55
+* Memória residente real (RSS): 1896 KB
+* Pico de memória: 1896 KB
+Tempo Aproximativo FPTAS: 57
 
 * Número de itens: 20
 * Peso médio: 54.9
@@ -129,9 +129,9 @@ Tempo Aproximativo FPTAS: 55
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1908 KB
-* Pico de memória: 1908 KB
-Tempo Aproximativo Guloso: 7
+* Memória residente real (RSS): 1904 KB
+* Pico de memória: 1904 KB
+Tempo Aproximativo Guloso: 6
 
 * Número de itens: 4
 * Peso médio: 6.75
@@ -141,462 +141,12 @@ Tempo Aproximativo Guloso: 7
 * Capacidade da Mochila: 20
 Branch and Bound: 35
 === Métricas de Memória [BB] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1968 KB
-* Pico de memória: 1968 KB
-Tempo Branch and Bound : 9
-
-* Número de itens: 4
-* Peso médio: 6.75
-* Peso máximo: 9
-* Valor médio: 12
-* Valor máximo: 15
-* Capacidade da Mochila: 20
-2-aproximativo-fptas: 35
-=== Métricas de Memória [fptas] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1920 KB
-* Pico de memória: 1920 KB
-Tempo Aproximativo FPTAS: 12
-
-* Número de itens: 4
-* Peso médio: 6.75
-* Peso máximo: 9
-* Valor médio: 12
-* Valor máximo: 15
-* Capacidade da Mochila: 20
-2-aproximativo-guloso: 35
-=== Métricas de Memória [guloso] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1872 KB
-* Pico de memória: 1872 KB
-Tempo Aproximativo Guloso: 4
-
-* Número de itens: 4
-* Peso médio: 4.75
-* Peso máximo: 7
-* Valor médio: 10.25
-* Valor máximo: 13
-* Capacidade da Mochila: 11
-Branch and Bound: 23
-=== Métricas de Memória [BB] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1936 KB
-* Pico de memória: 1936 KB
-Tempo Branch and Bound : 55
-
-* Número de itens: 4
-* Peso médio: 4.75
-* Peso máximo: 7
-* Valor médio: 10.25
-* Valor máximo: 13
-* Capacidade da Mochila: 11
-2-aproximativo-fptas: 23
-=== Métricas de Memória [fptas] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1884 KB
-* Pico de memória: 1884 KB
-Tempo Aproximativo FPTAS: 19
-
-* Número de itens: 4
-* Peso médio: 4.75
-* Peso máximo: 7
-* Valor médio: 10.25
-* Valor máximo: 13
-* Capacidade da Mochila: 11
-2-aproximativo-guloso: 16
-=== Métricas de Memória [guloso] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1920 KB
-* Pico de memória: 1920 KB
-Tempo Aproximativo Guloso: 6
-
-* Número de itens: 15
-* Peso médio: 49.4611
-* Peso máximo: 89.5962
-* Valor médio: 37.5331
-* Valor máximo: 98.8525
-* Capacidade da Mochila: 375
-Branch and Bound: 481.069
-=== Métricas de Memória [BB] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1940 KB
-* Pico de memória: 1940 KB
-Tempo Branch and Bound : 45
-
-* Número de itens: 15
-* Peso médio: 49.4611
-* Peso máximo: 89.5962
-* Valor médio: 37.5331
-* Valor máximo: 98.8525
-* Capacidade da Mochila: 375
-2-aproximativo-fptas: 479.034
-=== Métricas de Memória [fptas] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1924 KB
-* Pico de memória: 1924 KB
-Tempo Aproximativo FPTAS: 37
-
-* Número de itens: 15
-* Peso médio: 49.4611
-* Peso máximo: 89.5962
-* Valor médio: 37.5331
-* Valor máximo: 98.8525
-* Capacidade da Mochila: 375
-2-aproximativo-guloso: 481.069
-=== Métricas de Memória [guloso] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1900 KB
-* Pico de memória: 1900 KB
-Tempo Aproximativo Guloso: 7
-
-* Número de itens: 10
-* Peso médio: 13
-* Peso máximo: 30
-* Valor médio: 10.5
-* Valor máximo: 20
-* Capacidade da Mochila: 60
-Branch and Bound: 52
-=== Métricas de Memória [BB] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1996 KB
-* Pico de memória: 1996 KB
-Tempo Branch and Bound : 94
-
-* Número de itens: 10
-* Peso médio: 13
-* Peso máximo: 30
-* Valor médio: 10.5
-* Valor máximo: 20
-* Capacidade da Mochila: 60
-2-aproximativo-fptas: 52
-=== Métricas de Memória [fptas] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1884 KB
-* Pico de memória: 1884 KB
-Tempo Aproximativo FPTAS: 26
-
-* Número de itens: 10
-* Peso médio: 13
-* Peso máximo: 30
-* Valor médio: 10.5
-* Valor máximo: 20
-* Capacidade da Mochila: 60
-2-aproximativo-guloso: 52
-=== Métricas de Memória [guloso] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1968 KB
-* Pico de memória: 1968 KB
-Tempo Aproximativo Guloso: 7
-
-* Número de itens: 7
-* Peso médio: 13.2857
-* Peso máximo: 31
-* Valor médio: 26.8571
-* Valor máximo: 70
-* Capacidade da Mochila: 50
-Branch and Bound: 107
-=== Métricas de Memória [BB] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1972 KB
-* Pico de memória: 1972 KB
-Tempo Branch and Bound : 25
-
-* Número de itens: 7
-* Peso médio: 13.2857
-* Peso máximo: 31
-* Valor médio: 26.8571
-* Valor máximo: 70
-* Capacidade da Mochila: 50
-2-aproximativo-fptas: 107
-=== Métricas de Memória [fptas] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1900 KB
-* Pico de memória: 1900 KB
-Tempo Aproximativo FPTAS: 14
-
-* Número de itens: 7
-* Peso médio: 13.2857
-* Peso máximo: 31
-* Valor médio: 26.8571
-* Valor máximo: 70
-* Capacidade da Mochila: 50
-2-aproximativo-guloso: 102
-=== Métricas de Memória [guloso] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1908 KB
-* Pico de memória: 1908 KB
-Tempo Aproximativo Guloso: 4
-
-* Número de itens: 23
-* Peso médio: 844.696
-* Peso máximo: 983
-* Valor médio: 839.522
-* Valor máximo: 981
-* Capacidade da Mochila: 10000
-Branch and Bound: 9767
-=== Métricas de Memória [BB] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1908 KB
-* Pico de memória: 1908 KB
-Tempo Branch and Bound : 98443
-
-* Número de itens: 23
-* Peso médio: 844.696
-* Peso máximo: 983
-* Valor médio: 839.522
-* Valor máximo: 981
-* Capacidade da Mochila: 10000
-2-aproximativo-fptas: 9630
-=== Métricas de Memória [fptas] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1912 KB
-* Pico de memória: 1912 KB
-Tempo Aproximativo FPTAS: 77
-
-* Número de itens: 23
-* Peso médio: 844.696
-* Peso máximo: 983
-* Valor médio: 839.522
-* Valor máximo: 981
-* Capacidade da Mochila: 10000
-2-aproximativo-guloso: 9751
-=== Métricas de Memória [guloso] ===
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
 * Memória residente real (RSS): 1888 KB
 * Pico de memória: 1888 KB
-Tempo Aproximativo Guloso: 5
-
-* Número de itens: 5
-* Peso médio: 18.2
-* Peso máximo: 31
-* Valor médio: 28.4
-* Valor máximo: 37
-* Capacidade da Mochila: 80
-Branch and Bound: 130
-=== Métricas de Memória [BB] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1876 KB
-* Pico de memória: 1876 KB
-Tempo Branch and Bound : 15
-
-* Número de itens: 5
-* Peso médio: 18.2
-* Peso máximo: 31
-* Valor médio: 28.4
-* Valor máximo: 37
-* Capacidade da Mochila: 80
-2-aproximativo-fptas: 130
-=== Métricas de Memória [fptas] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1884 KB
-* Pico de memória: 1884 KB
-Tempo Aproximativo FPTAS: 10
-
-* Número de itens: 5
-* Peso médio: 18.2
-* Peso máximo: 31
-* Valor médio: 28.4
-* Valor máximo: 37
-* Capacidade da Mochila: 80
-2-aproximativo-guloso: 130
-=== Métricas de Memória [guloso] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1940 KB
-* Pico de memória: 1940 KB
-Tempo Aproximativo Guloso: 5
-
-* Número de itens: 20
-* Peso médio: 54.9
-* Peso máximo: 96
-* Valor médio: 54.3
-* Valor máximo: 91
-* Capacidade da Mochila: 879
-Branch and Bound: 1025
-=== Métricas de Memória [BB] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1872 KB
-* Pico de memória: 1872 KB
-Tempo Branch and Bound : 2163
-
-* Número de itens: 20
-* Peso médio: 54.9
-* Peso máximo: 96
-* Valor médio: 54.3
-* Valor máximo: 91
-* Capacidade da Mochila: 879
-2-aproximativo-fptas: 1019
-=== Métricas de Memória [fptas] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1904 KB
-* Pico de memória: 1904 KB
-Tempo Aproximativo FPTAS: 99
-
-* Número de itens: 20
-* Peso médio: 54.9
-* Peso máximo: 96
-* Valor médio: 54.3
-* Valor máximo: 91
-* Capacidade da Mochila: 879
-2-aproximativo-guloso: 1019
-=== Métricas de Memória [guloso] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1876 KB
-* Pico de memória: 1876 KB
-Tempo Aproximativo Guloso: 6
-
-* Número de itens: 10
-* Peso médio: 53.9
-* Peso máximo: 95
-* Valor médio: 41.2
-* Valor máximo: 87
-* Capacidade da Mochila: 269
-Branch and Bound: 295
-=== Métricas de Memória [BB] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1920 KB
-* Pico de memória: 1920 KB
-Tempo Branch and Bound : 23
-
-* Número de itens: 10
-* Peso médio: 53.9
-* Peso máximo: 95
-* Valor médio: 41.2
-* Valor máximo: 87
-* Capacidade da Mochila: 269
-2-aproximativo-fptas: 292
-=== Métricas de Memória [fptas] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1928 KB
-* Pico de memória: 1928 KB
-Tempo Aproximativo FPTAS: 15
-
-* Número de itens: 10
-* Peso médio: 53.9
-* Peso máximo: 95
-* Valor médio: 41.2
-* Valor máximo: 87
-* Capacidade da Mochila: 269
-2-aproximativo-guloso: 294
-=== Métricas de Memória [guloso] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1920 KB
-* Pico de memória: 1920 KB
-Tempo Aproximativo Guloso: 6
-
-* Número de itens: 20
-* Peso médio: 54.9
-* Peso máximo: 96
-* Valor médio: 54.25
-* Valor máximo: 91
-* Capacidade da Mochila: 878
-Branch and Bound: 1024
-=== Métricas de Memória [BB] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1868 KB
-* Pico de memória: 1868 KB
-Tempo Branch and Bound : 1831
-
-* Número de itens: 20
-* Peso médio: 54.9
-* Peso máximo: 96
-* Valor médio: 54.25
-* Valor máximo: 91
-* Capacidade da Mochila: 878
-2-aproximativo-fptas: 1027
-=== Métricas de Memória [fptas] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1932 KB
-* Pico de memória: 1932 KB
-Tempo Aproximativo FPTAS: 85
-
-* Número de itens: 20
-* Peso médio: 54.9
-* Peso máximo: 96
-* Valor médio: 54.25
-* Valor máximo: 91
-* Capacidade da Mochila: 878
-2-aproximativo-guloso: 1018
-=== Métricas de Memória [guloso] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1904 KB
-* Pico de memória: 1904 KB
-Tempo Aproximativo Guloso: 9
-
-* Número de itens: 4
-* Peso médio: 6.75
-* Peso máximo: 9
-* Valor médio: 12
-* Valor máximo: 15
-* Capacidade da Mochila: 20
-Branch and Bound: 35
-=== Métricas de Memória [BB] ===
-* Uso aproximado (rusage): 0 KB
-* Dados não compartilhados: 0 KB
-* Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1872 KB
-* Pico de memória: 1872 KB
-Tempo Branch and Bound : 9
+Tempo Branch and Bound : 12
 
 * Número de itens: 4
 * Peso médio: 6.75
@@ -609,9 +159,9 @@ Tempo Branch and Bound : 9
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1864 KB
-* Pico de memória: 1864 KB
-Tempo Aproximativo FPTAS: 17
+* Memória residente real (RSS): 1996 KB
+* Pico de memória: 1996 KB
+Tempo Aproximativo FPTAS: 22
 
 * Número de itens: 4
 * Peso médio: 6.75
@@ -624,8 +174,8 @@ Tempo Aproximativo FPTAS: 17
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1892 KB
-* Pico de memória: 1892 KB
+* Memória residente real (RSS): 1912 KB
+* Pico de memória: 1912 KB
 Tempo Aproximativo Guloso: 4
 
 * Número de itens: 4
@@ -639,9 +189,9 @@ Branch and Bound: 23
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1956 KB
-* Pico de memória: 1956 KB
-Tempo Branch and Bound : 9
+* Memória residente real (RSS): 1896 KB
+* Pico de memória: 1896 KB
+Tempo Branch and Bound : 10
 
 * Número de itens: 4
 * Peso médio: 4.75
@@ -654,8 +204,8 @@ Tempo Branch and Bound : 9
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1908 KB
-* Pico de memória: 1908 KB
+* Memória residente real (RSS): 1944 KB
+* Pico de memória: 1944 KB
 Tempo Aproximativo FPTAS: 11
 
 * Número de itens: 4
@@ -669,9 +219,9 @@ Tempo Aproximativo FPTAS: 11
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1984 KB
-* Pico de memória: 1984 KB
-Tempo Aproximativo Guloso: 2
+* Memória residente real (RSS): 1884 KB
+* Pico de memória: 1884 KB
+Tempo Aproximativo Guloso: 3
 
 * Número de itens: 15
 * Peso médio: 49.4611
@@ -684,9 +234,9 @@ Branch and Bound: 481.069
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1868 KB
-* Pico de memória: 1868 KB
-Tempo Branch and Bound : 38
+* Memória residente real (RSS): 1884 KB
+* Pico de memória: 1884 KB
+Tempo Branch and Bound : 37
 
 * Número de itens: 15
 * Peso médio: 49.4611
@@ -699,9 +249,9 @@ Tempo Branch and Bound : 38
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1928 KB
-* Pico de memória: 1928 KB
-Tempo Aproximativo FPTAS: 23
+* Memória residente real (RSS): 1968 KB
+* Pico de memória: 1968 KB
+Tempo Aproximativo FPTAS: 24
 
 * Número de itens: 15
 * Peso médio: 49.4611
@@ -714,8 +264,8 @@ Tempo Aproximativo FPTAS: 23
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1876 KB
-* Pico de memória: 1876 KB
+* Memória residente real (RSS): 1900 KB
+* Pico de memória: 1900 KB
 Tempo Aproximativo Guloso: 5
 
 * Número de itens: 10
@@ -729,9 +279,9 @@ Branch and Bound: 52
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1984 KB
-* Pico de memória: 1984 KB
-Tempo Branch and Bound : 93
+* Memória residente real (RSS): 1992 KB
+* Pico de memória: 1992 KB
+Tempo Branch and Bound : 75
 
 * Número de itens: 10
 * Peso médio: 13
@@ -744,9 +294,9 @@ Tempo Branch and Bound : 93
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1928 KB
-* Pico de memória: 1928 KB
-Tempo Aproximativo FPTAS: 30
+* Memória residente real (RSS): 1944 KB
+* Pico de memória: 1944 KB
+Tempo Aproximativo FPTAS: 17
 
 * Número de itens: 10
 * Peso médio: 13
@@ -761,7 +311,7 @@ Tempo Aproximativo FPTAS: 30
 * Stack não compartilhado: 0 KB
 * Memória residente real (RSS): 1908 KB
 * Pico de memória: 1908 KB
-Tempo Aproximativo Guloso: 5
+Tempo Aproximativo Guloso: 7
 
 * Número de itens: 7
 * Peso médio: 13.2857
@@ -774,9 +324,9 @@ Branch and Bound: 107
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1928 KB
-* Pico de memória: 1928 KB
-Tempo Branch and Bound : 12
+* Memória residente real (RSS): 1908 KB
+* Pico de memória: 1908 KB
+Tempo Branch and Bound : 16
 
 * Número de itens: 7
 * Peso médio: 13.2857
@@ -789,9 +339,9 @@ Tempo Branch and Bound : 12
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1876 KB
-* Pico de memória: 1876 KB
-Tempo Aproximativo FPTAS: 17
+* Memória residente real (RSS): 1916 KB
+* Pico de memória: 1916 KB
+Tempo Aproximativo FPTAS: 15
 
 * Número de itens: 7
 * Peso médio: 13.2857
@@ -804,9 +354,9 @@ Tempo Aproximativo FPTAS: 17
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1888 KB
-* Pico de memória: 1888 KB
-Tempo Aproximativo Guloso: 3
+* Memória residente real (RSS): 1940 KB
+* Pico de memória: 1940 KB
+Tempo Aproximativo Guloso: 4
 
 * Número de itens: 23
 * Peso médio: 844.696
@@ -819,9 +369,9 @@ Branch and Bound: 9767
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1876 KB
-* Pico de memória: 1876 KB
-Tempo Branch and Bound : 108195
+* Memória residente real (RSS): 1888 KB
+* Pico de memória: 1888 KB
+Tempo Branch and Bound : 250255
 
 * Número de itens: 23
 * Peso médio: 844.696
@@ -834,9 +384,9 @@ Tempo Branch and Bound : 108195
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1960 KB
-* Pico de memória: 1960 KB
-Tempo Aproximativo FPTAS: 243
+* Memória residente real (RSS): 1936 KB
+* Pico de memória: 1936 KB
+Tempo Aproximativo FPTAS: 176
 
 * Número de itens: 23
 * Peso médio: 844.696
@@ -849,8 +399,8 @@ Tempo Aproximativo FPTAS: 243
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1864 KB
-* Pico de memória: 1864 KB
+* Memória residente real (RSS): 1940 KB
+* Pico de memória: 1940 KB
 Tempo Aproximativo Guloso: 12
 
 * Número de itens: 5
@@ -864,9 +414,9 @@ Branch and Bound: 130
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1888 KB
-* Pico de memória: 1888 KB
-Tempo Branch and Bound : 13
+* Memória residente real (RSS): 1884 KB
+* Pico de memória: 1884 KB
+Tempo Branch and Bound : 14
 
 * Número de itens: 5
 * Peso médio: 18.2
@@ -879,9 +429,9 @@ Tempo Branch and Bound : 13
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1908 KB
-* Pico de memória: 1908 KB
-Tempo Aproximativo FPTAS: 18
+* Memória residente real (RSS): 1936 KB
+* Pico de memória: 1936 KB
+Tempo Aproximativo FPTAS: 21
 
 * Número de itens: 5
 * Peso médio: 18.2
@@ -894,7 +444,7 @@ Tempo Aproximativo FPTAS: 18
 * Uso aproximado (rusage): 0 KB
 * Dados não compartilhados: 0 KB
 * Stack não compartilhado: 0 KB
-* Memória residente real (RSS): 1872 KB
-* Pico de memória: 1872 KB
-Tempo Aproximativo Guloso: 11
+* Memória residente real (RSS): 1884 KB
+* Pico de memória: 1884 KB
+Tempo Aproximativo Guloso: 5
 
