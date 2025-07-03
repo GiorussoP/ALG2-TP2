@@ -7,12 +7,11 @@ INC_DIR := include
 OBJ_DIR := obj
 BIN_DIR := bin
 SRC_DIR := src
-TESTES_DIR:= tests
-RESULTS_DIR:= results
+TESTES_DIR := tests
+RESULTS_DIR := results
 
-LARGE := $(wildcard $(TESTES_DIR)/large_scale_trated/*)
-LARGE2 := $(wildcard $(TESTES_DIR)/large_scale_2/*)
-LOW := $(wildcard $(TESTES_DIR)/low-dimensional/*)
+LARGE := $(wildcard $(TESTES_DIR)/tratado_large_scale/*)
+LOW := $(wildcard $(TESTES_DIR)/tratado_low_dimensional/*)
 
 ## saída
 EXEC_NAME := tp2.exe
@@ -26,7 +25,6 @@ all: $(BIN_DIR)/$(EXEC_NAME)
 $(BIN_DIR)/$(EXEC_NAME) : $(OBJS)
 	mkdir -p $(dir $@)
 	$(CC) $^ -o $@
-
 $(OBJ_DIR)/$(SRC_DIR)/%.cpp.o: $(SRC_DIR)/%.cpp
 	mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -I./$(INC_DIR)/ -c $^ -o $@
@@ -35,56 +33,52 @@ clean:
 	rm -rf $(OBJ_DIR)
 	rm -rf $(BIN_DIR)
 
-run : all
-	./$(BIN_DIR)/$(EXEC_NAME)
+cleanresults:
+	rm -rf $(RESULTS_DIR)
 
 # Executa os testes
-testslow: all
-	@rm -f $(TESTES_DIR)/low_results.txt
+$(RESULTS_DIR)/low_results.txt:
+	mkdir -p $(RESULTS_DIR)
 	@for file in $(LOW); do \
 		# modo 1 -------------------------------------------- \
-		echo "=== $$file (mode 1) ===" ; \
+		echo "\033[33m=== $$file (mode 1) ===\033[0m" ; \
 		./$(BIN_DIR)/$(EXEC_NAME) "$$file" 1 >> $(RESULTS_DIR)/low_results.txt ; \
 		# modo 2 -------------------------------------------- \
-		echo "=== $$file (mode 2) ===" ; \
+		echo "\033[33m=== $$file (mode 2) ===\033[0m" ; \
 		./$(BIN_DIR)/$(EXEC_NAME) "$$file" 2 >> $(RESULTS_DIR)/low_results.txt ; \
 		# modo 3 -------------------------------------------- \
-		echo "=== $$file (mode 3) ===" ; \
+		echo "\033[33m=== $$file (mode 3) ===\033[0m" ; \
 		./$(BIN_DIR)/$(EXEC_NAME) "$$file" 3 >> $(RESULTS_DIR)/low_results.txt ; \
 	done
 
+$(RESULTS_DIR)/large_results.txt:
+	mkdir -p $(RESULTS_DIR)
+	@for file in $(LARGE); do \
+		echo "\033[33m=== $$file (mode 3) ===\033[0m" ; \
+		timeout 30m ./$(BIN_DIR)/$(EXEC_NAME)  "$$file" 3 >> $(RESULTS_DIR)/large_results.txt || echo "skipped $$file, timeout"; \
+	done
+
+
+testslow: all
+	mkdir -p $(RESULTS_DIR)
+	@echo "Iniciando testes com arquivos de baixa dimensão..."
+	@$(MAKE) --always-make $(RESULTS_DIR)/low_results.txt
+	@echo "Testes com arquivos de baixa dimensão concluídos."
 
 testslarge: all
-	@rm -f $(TESTES_DIR)/large_results.txt
-	@for file in $(LARGE); do \
-		# modo 1 -------------------------------------------- \
-		echo "=== $$file (mode 1) ===" ; \
-		./$(BIN_DIR)/$(EXEC_NAME)  "$$file" 1 >> $(RESULTS_DIR)/large_results.txt; \
-		# modo 2 -------------------------------------------- \
-		echo "=== $$file (mode 2) ===" ; \
-		./$(BIN_DIR)/$(EXEC_NAME)  "$$file" 2 >> $(RESULTS_DIR)/large_results.txt; \
-		# modo 3 -------------------------------------------- \
-		echo "=== $$file (mode 3) ===" ; \
-		./$(BIN_DIR)/$(EXEC_NAME)  "$$file" 3 >> $(RESULTS_DIR)/large_results.txt; \
-	done
+	mkdir -p $(RESULTS_DIR)
+	@echo "Iniciando testes com arquivos de alta dimensão..."
+	@echo "Aguarde, isso pode levar algum tempo...\033"
+	@$(MAKE) --always-make $(RESULTS_DIR)/large_results.txt
+	@echo "Testes com arquivos de alta dimensão concluídos."
 
-testslarge2: all
-	@rm -f $(TESTES_DIR)/large_results.txt
-	@for file in $(LARGE2); do \
-		# modo 1 -------------------------------------------- \
-		echo "=== $$file (mode 1) ===" ; \
-		timeout 30m ./$(BIN_DIR)/$(EXEC_NAME)  "$$file" 1 >> $(RESULTS_DIR)/large_results.txt || echo "skipped $$file"; \
-		# modo 2 -------------------------------------------- \
-		echo "=== $$file (mode 2) ===" ; \
-		timeout 30m ./$(BIN_DIR)/$(EXEC_NAME)  "$$file" 2 >> $(RESULTS_DIR)/large_results.txt || echo "skipped $$file"; \
-		# modo 3 -------------------------------------------- \
-		echo "=== $$file (mode 3) ===" ; \
-		timeout 30m ./$(BIN_DIR)/$(EXEC_NAME)  "$$file" 3 >> $(RESULTS_DIR)/large_results.txt || echo "skipped $$file"; \
-	done
+tests : testslow testslarge
+	@echo "Testes concluídos."
 
+results: all $(RESULTS_DIR)/low_results.txt $(RESULTS_DIR)/large_results.txt
+	mkdir -p $(RESULTS_DIR)/images
+	@echo "Transformando resultados..."
+	python3 ./src/transform_results.py
+	@echo "Resultados transformados e salvos em $(RESULTS_DIR)."
 
-# Checa se o programa possui vazamentos de memória, usando valgrind.
-memcheck : all
-	valgrind --leak-check=full -s ./$(BIN_DIR)/$(EXEC_NAME) < tests/inputs/testCase05.txt
-
-.PHONY: clean
+.PHONY: clean tests testslow testslarge results cleanresults

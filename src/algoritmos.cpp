@@ -27,7 +27,8 @@ double AlgoritmosMochila::branchAndBound(std::vector<Item> items, double W){
 
     double best_sol = 0;
     while(!pq.empty()){
-        Node curr_node = pq.top(); pq.pop();    // Obtendo o melhor para best-first-search
+        // Obtendo o melhor para best-first-search
+        Node curr_node = pq.top(); pq.pop();
 
         // Descartando nós que não podem melhorar a solução
         if (curr_node.ub <= best_sol)

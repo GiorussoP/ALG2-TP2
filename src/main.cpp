@@ -24,17 +24,17 @@ double totalSpentTime(struct rusage *start, struct rusage *end){
 }
 
 //lendo o arquivo e salvando em um vetor de item, criado na estrutura de dados
-void loadData(std::string &path, std::vector<Item> &list, int &w_cap){
+void loadData(std::string &path, std::vector<Item> &list, int &w_cap,double &sol){
     std::ifstream arq(path);
     //verifica se o arquivo foi aberto corretamente
     if (!arq){
-        std::cout<<"Error!"<<std::endl;
+        std::cout<<"Erro!"<<std::endl;
         exit (1);
     }
     int n;
     // lendo quantidade de itens e capacidade
-    if (!(arq >> n >> w_cap)) {  //verificando se conseguiu ler a linha corretamente
-        std::cerr << "Error reading n and W from file" << std::endl;
+    if (!(arq >> sol >> n >> w_cap)) {  //verificando se conseguiu ler corretamente
+        std::cerr << "Erro lendo sol, n e w!" << std::endl;
         exit(1);
     }
     //instanciando as variáveis para leitura dos valores
@@ -42,7 +42,7 @@ void loadData(std::string &path, std::vector<Item> &list, int &w_cap){
 
     for (int i = 0; i < n; i++) {
         if (!(arq >> v >> w)) {    
-            std::cerr << "Error reading item " << i << " from file" << std::endl;
+            std::cerr << "Erro lendo item " << i << "!" << std::endl;
             exit(1);
         }
         //adicionando o valor à lista
@@ -87,51 +87,56 @@ void printItemInfo(std::vector<Item>& items) {
 
 int main(int argc, char **argv) {
     if(argc < 3){
-        std::cerr << "Usage: " << argv[0] << " <path> <mode>\n"
-                  << "       <mode> = 1 (branch‑and‑bound) | 2 (approximativo FPTAS) | 3 (aproximativo guloso)\n";
+        std::cerr << "Uso: " << argv[0] << " <caminho> <modo>\n"
+                  << "       <modo> = 1 (branch‑and‑bound) | 2 (approximativo FPTAS) | 3 (aproximativo guloso)\n";
         return 1;
     }
-    //Peso Máximo do problema
+    // Solução ótima do problema
+    double sol;
+    // Peso Máximo do problema
     int w_cap;
-    //caminho do arquivo
+    // Caminho do arquivo
     std::string path = argv[1];
-    //modo: 1 (branch and bound); 2 (aproximativo)
+    // Modo de execução do algoritmo 1 - Branch and Bound, 2 - Aproximativo FPTAS, 3 - Aproximativo Guloso
     int modo = std::stoi(argv[2]);
-    //vetor auxiliar
+    // Vetor auxiliar
     std::vector<Item> list;
-    //lendo o arquivo e salvando em um vetor
-    loadData(path,list,w_cap);
-    //iniciando o struct do contador.
+    // Lendo o arquivo e salvando em um vetor
+    loadData(path,list,w_cap,sol);
+    // Iniciando o struct do contador.
     struct rusage start, end;
 
     if(modo == 1){
-        //Mensuração do tempo do Branch and Bound padrão
+        // Medindo tempo do Branch and Bound padrão
         getrusage(RUSAGE_SELF, &start);
         double resultado = AlgoritmosMochila::branchAndBound(list, w_cap);
         getrusage(RUSAGE_SELF, &end);
         printItemInfo(list);
+        std::cout << "* Solução ótima: " << sol << "\n";
         std::cout <<"* Capacidade da Mochila: " << w_cap << "\n";
         std::cout<< "Branch and Bound: " << resultado << std::endl;
         printMemMetrics("BB");
         std::cout<<"Tempo Branch and Bound : "<< totalSpentTime(&start, &end)<<std::endl;
     }else if(modo == 2){
 
-        //mensuração do tempo do aproximativo
+        // Medindo tempo do aproximativo
         getrusage(RUSAGE_SELF, &start);
         double resultado = AlgoritmosMochila::aproximativoFPTAS(list, w_cap);
         getrusage(RUSAGE_SELF, &end);
         printItemInfo(list);
+        std::cout << "* Solução ótima: " << sol << "\n";
         std::cout <<"* Capacidade da Mochila: " << w_cap << "\n";
         std::cout << "2-aproximativo-fptas: " << resultado << std::endl;
         printMemMetrics("fptas");
         std::cout<<"Tempo Aproximativo FPTAS: "<< totalSpentTime(&start, &end)<<std::endl;
     }
     else if(modo == 3){
-        //mensuração do tempo do aproximativo
+        // Medindo tempo do aproximativo
         getrusage(RUSAGE_SELF, &start);
         double resultado = AlgoritmosMochila::aproximativoGuloso(list, w_cap);
         getrusage(RUSAGE_SELF, &end);
         printItemInfo(list);
+        std::cout << "* Solução ótima: " << sol << "\n";
         std::cout <<"* Capacidade da Mochila: " << w_cap << "\n";
         std::cout << "2-aproximativo-guloso: " << resultado << std::endl;
         printMemMetrics("guloso");
