@@ -32,6 +32,9 @@ Ao executar `make results`, é gerada uma tabela a partir dos arquivos com os re
 ``` bash
 make results # Gera a tabela 'resultados_combinados.csv' e os gráficos em 'images/', no diretório './results/'
 ```
+#### Limpando os arquivos gerados
+Para limpar os diretórios `/obj/` e `/bin/` gerados, digite `make clean`. Caso queira limpar o diretório `results` para realizar novos testes, digite `make cleanresults`.
+
 ## Nossos resultados:
 ### [<u>Tabela com todos os resultados</u>](results/resultados_combinados.csv)
 Aqui estão exibidos os gráficos comparativos referentes a todos os nossos testes:

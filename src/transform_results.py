@@ -215,8 +215,6 @@ plt.yticks([0,25,50,75,100])
 plt.legend(loc='lower right',framealpha=1)
 plt.savefig(bbox_inches='tight',fname="results/images/precisao_low.png")
 
-print(df_high[['BB_sol', 'FPTAS_sol', 'greedy_sol', 'sol']])
-
 plt.figure(figsize=(28, 6))
 plt.title("Precisão para Problemas de Alta Complexidade")
 plt.bar(np.arange(len(df_high)) - 0.3, 100 * df_high['BB_sol']/df_high['sol'], color='red', width=0.3, label='Solução Branch and Bound', alpha=1)
@@ -240,5 +238,4 @@ plt.yticks([0,25,50,75,100])
 plt.legend(loc='lower left',framealpha=1)
 plt.savefig(bbox_inches='tight',fname="results/images/precisao_high.png")
 
-df_combined = df_combined.fillna('')
 df_combined.to_csv('results/resultados_combinados.csv', index=False)
