@@ -54,19 +54,26 @@ $(RESULTS_DIR)/low_results.txt:
 $(RESULTS_DIR)/large_results.txt:
 	mkdir -p $(RESULTS_DIR)
 	@for file in $(LARGE); do \
+		# modo 1 -------------------------------------------- \
+		echo "\033[33m=== $$file (mode 1) ===\033[0m" ; \
+		timeout 30m ./$(BIN_DIR)/$(EXEC_NAME)  "$$file" 1 >> $(RESULTS_DIR)/large_results.txt || echo "skipped $$file, timeout"; \
+		# modo 2 -------------------------------------------- \
+		echo "\033[33m=== $$file (mode 2) ===\033[0m" ; \
+		timeout 30m ./$(BIN_DIR)/$(EXEC_NAME)  "$$file" 2 >> $(RESULTS_DIR)/large_results.txt || echo "skipped $$file, timeout"; \
+		# modo 3 -------------------------------------------- \
 		echo "\033[33m=== $$file (mode 3) ===\033[0m" ; \
 		timeout 30m ./$(BIN_DIR)/$(EXEC_NAME)  "$$file" 3 >> $(RESULTS_DIR)/large_results.txt || echo "skipped $$file, timeout"; \
 	done
 
 
 testslow: all
-	mkdir -p $(RESULTS_DIR)
+	@mkdir -p $(RESULTS_DIR)
 	@echo "Iniciando testes com arquivos de baixa dimensão..."
 	@$(MAKE) --always-make $(RESULTS_DIR)/low_results.txt
 	@echo "Testes com arquivos de baixa dimensão concluídos."
 
 testslarge: all
-	mkdir -p $(RESULTS_DIR)
+	@mkdir -p $(RESULTS_DIR)
 	@echo "Iniciando testes com arquivos de alta dimensão..."
 	@echo "Aguarde, isso pode levar algum tempo...\033"
 	@$(MAKE) --always-make $(RESULTS_DIR)/large_results.txt
