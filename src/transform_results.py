@@ -100,16 +100,16 @@ df_low = df_combined[df_combined['type'] == 'Low'].sort_values(by=['N','W'],igno
 df_high = df_combined[df_combined['type'] == 'Large'].sort_values(by=['N','W'],ignore_index=True).copy()
 
 #Tempo
-plt.figure(figsize=(12, 6))
+plt.figure(figsize=(6, 7))
 plt.title('Tempo de Execução para Problemas de Baixa Complexidade')
-plt.yscale('log')
-plt.bar(np.arange(len(df_low)) - 0.3, df_low['BB_time'], color='red', width=0.3, label='Tempo Branch and Bound', alpha=1)
-plt.bar(np.arange(len(df_low)), df_low['FPTAS_time'], color='green', width=0.3, label='Tempo FPTAS', alpha=1)
-plt.bar(np.arange(len(df_low)) + 0.3, df_low['greedy_time'], color='blue', width=0.3, label='Tempo Guloso', alpha=1)
-plt.xticks(
-    ticks=range(len(df_low)),
+plt.xscale('log')
+plt.barh(-np.arange(len(df_low)) - 0.3, df_low['BB_time'], color='red', height=0.3, label='Tempo Branch and Bound', alpha=1)
+plt.barh(-np.arange(len(df_low)), df_low['FPTAS_time'], color='green', height=0.3, label='Tempo FPTAS', alpha=1)
+plt.barh(-np.arange(len(df_low)) + 0.3, df_low['greedy_time'], color='blue', height=0.3, label='Tempo Guloso', alpha=1)
+plt.yticks(
+    ticks=range(0,-len(df_low),-1),
     labels=[
-        f"N={n_val}\nW={W_val}\nwmax:{w_max}\nwavg:{w_avg}\nvmax:{v_max}\nvavg:{v_avg}"
+        f"N: {n_val}, W:  {W_val}\nwmax: {w_max}, wavg: {w_avg}, vmax: {v_max}, vavg: {v_avg}"
         for n_val, W_val, w_max, w_avg, v_max, v_avg in zip(
             df_low['N'], df_low['W'], df_low['w_max'], df_low['w_avg'], df_low['v_max'], df_low['v_avg']
         )
@@ -117,27 +117,27 @@ plt.xticks(
     rotation=0,
     fontsize=8
 )
-plt.ylabel('Tempo (ms) - Escala Logarítmica')
-plt.legend()
+plt.xlabel('Tempo (ms) - Escala Logarítmica')
+plt.legend(framealpha=1,bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.savefig(bbox_inches='tight',fname="results/images/tempo_low.png")
 
-plt.figure(figsize=(28, 6))
+plt.figure(figsize=(6, 10))
 plt.title("Tempo de Execução para Problemas de Alta Complexidade")
 
 bab_timeout = df_high[df_high['BB_time'].isna()]
 fptas_timeout = df_high[df_high['FPTAS_time'].isna()]
 
-plt.yscale('log')
-plt.bar(np.arange(len(df_high)) - 0.3, df_high['BB_time'], color='red', width=0.3, label='Tempo Branch and Bound', alpha=1)
-plt.bar(bab_timeout.index-0.3,1800000, color='red', width=0.3, alpha=0.1)
-plt.bar(np.arange(len(df_high)), df_high['FPTAS_time'], color='green', width=0.3, label='Tempo FPTAS', alpha=1)
-plt.bar(fptas_timeout.index,1800000, color='green', width=0.3, alpha=0.1)
-plt.bar(np.arange(len(df_high)) + 0.3, df_high['greedy_time'], color='blue', width=0.3, label='Tempo Guloso', alpha=1)
-plt.axhline(y=1800000, color='black', linestyle='--', label='Timeout após 30 minutos',alpha=0.3)
-plt.xticks(
-    ticks=range(len(df_high)),
+plt.xscale('log')
+plt.barh(-np.arange(len(df_high)) - 0.3, df_high['BB_time'], color='red', height=0.3, label='Tempo Branch and Bound', alpha=1)
+plt.barh(-bab_timeout.index-0.3,1800000, color='red', height=0.3, alpha=0.1)
+plt.barh(-np.arange(len(df_high)), df_high['FPTAS_time'], color='green', height=0.3, label='Tempo FPTAS', alpha=1)
+plt.barh(-fptas_timeout.index,1800000, color='green', height=0.3, alpha=0.1)
+plt.barh(-np.arange(len(df_high)) + 0.3, df_high['greedy_time'], color='blue', height=0.3, label='Tempo Guloso', alpha=1)
+plt.axvline(x=1800000, color='black', linestyle='--', label='Timeout após 30 minutos',alpha=0.3)
+plt.yticks(
+    ticks=range(0,-len(df_high),-1),
     labels=[
-        f"N={n_val}\nW={W_val}\nwmax:{w_max}\nwavg:{w_avg}\nvmax:{v_max}\nvavg:{v_avg}"
+        f"N: {n_val}, W:  {W_val}\nwmax: {w_max}, wavg: {w_avg}, vmax: {v_max}, vavg: {v_avg}"
         for n_val, W_val, w_max, w_avg, v_max, v_avg in zip(
             df_high['N'], df_high['W'], df_high['w_max'], df_high['w_avg'], df_high['v_max'], df_high['v_avg']
         )
@@ -145,20 +145,20 @@ plt.xticks(
     rotation=0,
     fontsize=8
 )
-plt.ylabel('Tempo (ms) - Escala Logarítmica')
-plt.legend()
+plt.xlabel('Tempo (ms) - Escala Logarítmica')
+plt.legend(framealpha=1,bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.savefig(bbox_inches='tight',fname="results/images/tempo_high.png")
 
 #Espaço
-plt.figure(figsize=(12, 6))
+plt.figure(figsize=(6, 7))
 plt.title('Uso de memória para Problemas de Baixa Complexidade')
-plt.bar(np.arange(len(df_low)) - 0.3, df_low['BB_mem'], color='red', width=0.3, label='Custo Branch and Bound', alpha=1)
-plt.bar(np.arange(len(df_low)), df_low['FPTAS_mem'], color='green', width=0.3, label='Custo FPTAS', alpha=1)
-plt.bar(np.arange(len(df_low)) + 0.3, df_low['greedy_mem'], color='blue', width=0.3, label='Custo Guloso', alpha=1)
-plt.xticks(
-    ticks=range(len(df_low)),
+plt.barh(-np.arange(len(df_low)) - 0.3, df_low['BB_mem'], color='red', height=0.3, label='Custo Branch and Bound', alpha=1)
+plt.barh(-np.arange(len(df_low)), df_low['FPTAS_mem'], color='green', height=0.3, label='Custo FPTAS', alpha=1)
+plt.barh(-np.arange(len(df_low)) + 0.3, df_low['greedy_mem'], color='blue', height=0.3, label='Custo Guloso', alpha=1)
+plt.yticks(
+    ticks=range(0,-len(df_low),-1),
     labels=[
-        f"N={n_val}\nW={W_val}\nwmax:{w_max}\nwavg:{w_avg}\nvmax:{v_max}\nvavg:{v_avg}"
+        f"N: {n_val}, W:  {W_val}\nwmax: {w_max}, wavg: {w_avg}, vmax: {v_max}, vavg: {v_avg}"
         for n_val, W_val, w_max, w_avg, v_max, v_avg in zip(
             df_low['N'], df_low['W'], df_low['w_max'], df_low['w_avg'], df_low['v_max'], df_low['v_avg']
         )
@@ -166,20 +166,20 @@ plt.xticks(
     rotation=0,
     fontsize=8
 )
-plt.ylabel('Uso de memória (KB)')
-plt.legend(loc='lower left',framealpha=1)
+plt.xlabel('Uso de memória (KB)')
+plt.legend(framealpha=1,bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.savefig(bbox_inches='tight',fname="results/images/custo_low.png")
 
-plt.figure(figsize=(28, 6))
+plt.figure(figsize=(6, 10))
 plt.title("Uso de memória para Problemas de Alta Complexidade")
-plt.yscale('log')
-plt.bar(np.arange(len(df_high)) - 0.2, df_high['BB_mem'], color='red', width=0.3, label='Custo Branch and Bound', alpha=1)
-plt.bar(np.arange(len(df_high)), df_high['FPTAS_mem'], color='green', width=0.3, label='Custo FPTAS', alpha=1)
-plt.bar(np.arange(len(df_high)) + 0.3, df_high['greedy_mem'], color='blue', width=0.3, label='Custo Guloso', alpha=1)
-plt.xticks(
-    ticks=range(len(df_high)),
+plt.xscale('log')
+plt.barh(-np.arange(len(df_high)) - 0.2, df_high['BB_mem'], color='red', height=0.3, label='Custo Branch and Bound', alpha=1)
+plt.barh(-np.arange(len(df_high)), df_high['FPTAS_mem'], color='green', height=0.3, label='Custo FPTAS', alpha=1)
+plt.barh(-np.arange(len(df_high)) + 0.3, df_high['greedy_mem'], color='blue', height=0.3, label='Custo Guloso', alpha=1)
+plt.yticks(
+    ticks=range(0,-len(df_high),-1),
     labels=[
-        f"N={n_val}\nW={W_val}\nwmax:{w_max}\nwavg:{w_avg}\nvmax:{v_max}\nvavg:{v_avg}"
+        f"N: {n_val}, W:  {W_val}\nwmax: {w_max}, wavg: {w_avg}, vmax: {v_max}, vavg: {v_avg}"
         for n_val, W_val, w_max, w_avg, v_max, v_avg in zip(
             df_high['N'], df_high['W'], df_high['w_max'], df_high['w_avg'], df_high['v_max'], df_high['v_avg']
         )
@@ -187,20 +187,20 @@ plt.xticks(
     rotation=0,
     fontsize=8
 )
-plt.ylabel('Uso de memória (KB) - Escala Logarítmica')
-plt.legend()
+plt.xlabel('Uso de memória (KB) - Escala Logarítmica')
+plt.legend(framealpha=1,bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.savefig(bbox_inches='tight',fname="results/images/custo_high.png")
 
 #Precisão
-plt.figure(figsize=(12, 6))
+plt.figure(figsize=(6, 7))
 plt.title("Precisão para Problemas de Baixa Complexidade")
-plt.bar(np.arange(len(df_low)) - 0.3, 100 * df_low['BB_sol']/df_low['sol'], color='red', width=0.3, label='Solução Branch and Bound', alpha=1)
-plt.bar(np.arange(len(df_low)), 100 *df_low['FPTAS_sol']/df_low['sol'], color='green', width=0.3, label='Solução FPTAS', alpha=1)
-plt.bar(np.arange(len(df_low)) + 0.3, 100 *  df_low['greedy_sol']/df_low['sol'], color='blue', width=0.3, label='Solução Guloso', alpha=1)
-plt.xticks(
-    ticks=range(len(df_low)),
+plt.barh(-np.arange(len(df_low)) - 0.3, 100 * df_low['BB_sol']/df_low['sol'], color='red', height=0.3, label='Solução Branch and Bound', alpha=1)
+plt.barh(-np.arange(len(df_low)), 100 *df_low['FPTAS_sol']/df_low['sol'], color='green', height=0.3, label='Solução FPTAS', alpha=1)
+plt.barh(-np.arange(len(df_low)) + 0.3, 100 *  df_low['greedy_sol']/df_low['sol'], color='blue', height=0.3, label='Solução Guloso', alpha=1)
+plt.yticks(
+    ticks=range(0,-len(df_low),-1),
     labels=[
-        f"N={n_val}\nW={W_val}\nwmax:{w_max}\nwavg:{w_avg}\nvmax:{v_max}\nvavg:{v_avg}"
+        f"N: {n_val}, W:  {W_val}\nwmax: {w_max}, wavg: {w_avg}, vmax: {v_max}, vavg: {v_avg}"
         for n_val, W_val, w_max, w_avg, v_max, v_avg in zip(
             df_low['N'], df_low['W'], df_low['w_max'], df_low['w_avg'], df_low['v_max'], df_low['v_avg']
         )
@@ -208,22 +208,23 @@ plt.xticks(
     rotation=0,
    fontsize=8
 )
-plt.axhline(y=100, color='orange', linestyle='--', label='100% da solução ótima',alpha=0.5)
-plt.axhline(y=50, color='black', linestyle='--', label='50% da solução ótima',alpha=0.3)
-plt.ylabel('Resultado em relação à solução ótima (%)')
-plt.yticks([0,25,50,75,100])
-plt.legend(loc='lower right',framealpha=1)
+plt.axvline(x=100, color='orange', linestyle='--', label='100% da solução ótima',alpha=0.5)
+plt.axvline(x=50, color='black', linestyle='--', label='50% da solução ótima',alpha=0.3)
+plt.xlabel('Resultado em relação à solução ótima (%)')
+plt.xticks([0,25,50,75,100])
+plt.legend(framealpha=1,bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.savefig(bbox_inches='tight',fname="results/images/precisao_low.png")
 
-plt.figure(figsize=(28, 6))
+plt.figure(figsize=(6, 10))
+plt.subplots_adjust(left=0.1, right=0.95, bottom=0.1, top=0.95)
 plt.title("Precisão para Problemas de Alta Complexidade")
-plt.bar(np.arange(len(df_high)) - 0.3, 100 * df_high['BB_sol']/df_high['sol'], color='red', width=0.3, label='Solução Branch and Bound', alpha=1)
-plt.bar(np.arange(len(df_high)), 100 * df_high['FPTAS_sol']/df_high['sol'], color='green', width=0.3, label='Solução FPTAS', alpha=1)
-plt.bar(np.arange(len(df_high)) + 0.3, 100 * df_high['greedy_sol']/df_high['sol'], color='blue', width=0.3, label='Solução Guloso', alpha=1)
-plt.xticks(
-    ticks=range(len(df_high)),
+plt.barh(-np.arange(len(df_high)) - 0.3, 100 * df_high['BB_sol']/df_high['sol'], color='red', height=0.3, label='Solução Branch and Bound', alpha=1)
+plt.barh(-np.arange(len(df_high)), 100 * df_high['FPTAS_sol']/df_high['sol'], color='green', height=0.3, label='Solução FPTAS', alpha=1)
+plt.barh(-np.arange(len(df_high)) + 0.3, 100 * df_high['greedy_sol']/df_high['sol'], color='blue', height=0.3, label='Solução Guloso', alpha=1)
+plt.yticks(
+    ticks=range(0,-len(df_high),-1),
     labels=[
-        f"N={n_val}\nW={W_val}\nwmax:{w_max}\nwavg:{w_avg}\nvmax:{v_max}\nvavg:{v_avg}"
+        f"N: {n_val}, W:  {W_val}\nwmax: {w_max}, wavg: {w_avg}, vmax: {v_max}, vavg: {v_avg}"
         for n_val, W_val, w_max, w_avg, v_max, v_avg in zip(
             df_high['N'], df_high['W'], df_high['w_max'], df_high['w_avg'], df_high['v_max'], df_high['v_avg']
         )
@@ -231,11 +232,11 @@ plt.xticks(
     rotation=0,
     fontsize=8
     )
-plt.axhline(y=100, color='orange', linestyle='--', label='100% da solução ótima',alpha=0.5)
-plt.axhline(y=50, color='black', linestyle='--', label='50% da solução ótima',alpha=0.3)
-plt.ylabel('Resultado em relação à solução ótima (%)')
-plt.yticks([0,25,50,75,100])
-plt.legend(loc='lower left',framealpha=1)
+plt.axvline(x=100, color='orange', linestyle='--', label='100% da solução ótima',alpha=0.5)
+plt.axvline(x=50, color='black', linestyle='--', label='50% da solução ótima',alpha=0.3)
+plt.xlabel('Resultado em relação à solução ótima (%)')
+plt.xticks([0,25,50,75,100])
+plt.legend(framealpha=1,bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.savefig(bbox_inches='tight',fname="results/images/precisao_high.png")
 
 df_combined.to_csv('results/resultados_combinados.csv', index=False)

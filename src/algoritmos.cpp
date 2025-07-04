@@ -126,7 +126,6 @@ double AlgoritmosMochila::aproximativoFPTAS(std::vector<Item> items, double W){
                 tabela[V] = comItem;
                 escolhidos[V] = i;
             }
-
         }
     }
 
