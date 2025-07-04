@@ -3,8 +3,6 @@
 ### O que é?
 Este repositório contém a implementação de um trabalho prático da disciplina Algoritmos 2 - UFMG que aborda os aspectos práticos de algoritmos exatos e aproximativos para solucionar problemas NP-difíceis. Especificamente, foram, implementadas diferentes abordagens para solucionar o problema da mochila, usando uma técnica branch-and-bound e dois algoritmos 2-aproximativos: um baseado no FPTAS (fully polynomial-time approximation scheme), outro baseado em uma estratégia gulosa. No repositório, há um código que executa os testes para cada algoritmo em diversas instâncias diferentes, assim como exibe seus resultados, organizados em gráficos e em uma tabela. Para ver nossa análise dos resultados, veja a [<u>documentação</u>](documentacao.pdf).
 
-[Versão alternativa da documentação, em LaTeX](https://www.papeeria.com/p/55f1393e392e01fc0413a25bc6e2f4e5#/main.tex)
-
 ### Como usar?
 Após clonar o repositório, é possível usar o bash para executar comandos make, que manipulam os programas e os testes implementados.
 
